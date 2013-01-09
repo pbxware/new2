@@ -1,0 +1,108 @@
+/* line 3, ../../../scss/sass/store.scss */
+#b-store {
+  overflow: hidden;
+}
+/* line 5, ../../../scss/sass/store.scss */
+#b-store #b-nav-equipment {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+/* line 10, ../../../scss/sass/store.scss */
+#b-store #b-store-block-left {
+  width: 180px;
+  float: left;
+}
+/* line 13, ../../../scss/sass/store.scss */
+#b-store #b-store-block-left ul.b-store-menu {
+  border-bottom: 1px solid #5D5D5D;
+}
+/* line 15, ../../../scss/sass/store.scss */
+#b-store #b-store-block-left ul.b-store-menu a.store-menu-item {
+  border-color: #5D5D5D;
+  border-style: solid;
+  border-width: 1px 1px 0 1px;
+  display: block;
+  height: 36px;
+  padding: 10px;
+  text-decoration: none;
+}
+/* line 24, ../../../scss/sass/store.scss */
+#b-store #b-store-block-left ul.b-store-menu a.small {
+  height: 12px;
+}
+/* line 27, ../../../scss/sass/store.scss */
+#b-store #b-store-block-left ul.b-store-menu a.store-menu-item:hover {
+  background-color: #EAEAEA;
+}
+/* line 32, ../../../scss/sass/store.scss */
+#b-store #b-store-block-right {
+  width: 795px;
+  float: left;
+  margin-left: 45px;
+}
+/* line 36, ../../../scss/sass/store.scss */
+#b-store #b-store-block-right .breadcrumb {
+  margin-bottom: 20px;
+}
+/* line 39, ../../../scss/sass/store.scss */
+#b-store #b-store-block-right .line-description {
+  font-size: 11px;
+}
+/* line 43, ../../../scss/sass/store.scss */
+#b-store #b-store-main-page {
+  width: 100%;
+}
+/* line 45, ../../../scss/sass/store.scss */
+#b-store #b-store-main-page td {
+  width: 50%;
+  padding: 10px 10px 25px;
+}
+/* line 49, ../../../scss/sass/store.scss */
+#b-store #b-store-main-page .item {
+  display: block;
+}
+/* line 51, ../../../scss/sass/store.scss */
+#b-store #b-store-main-page .item .image {
+  float: left;
+  margin-right: 15px;
+}
+/* line 55, ../../../scss/sass/store.scss */
+#b-store #b-store-main-page .item .description {
+  font-size: 11px;
+  float: left;
+  width: 250px;
+  line-height: 16px;
+}
+/* line 63, ../../../scss/sass/store.scss */
+#b-store #b-store-sales {
+  width: 100%;
+  margin: 25px 0;
+}
+/* line 66, ../../../scss/sass/store.scss */
+#b-store #b-store-sales td {
+  vertical-align: middle;
+  padding: 5px;
+}
+/* line 70, ../../../scss/sass/store.scss */
+#b-store #b-store-sales td.title {
+  text-align: right;
+  font-weight: bold;
+  width: 170px;
+}
+/* line 75, ../../../scss/sass/store.scss */
+#b-store #b-store-sales td.links {
+  padding-left: 50px;
+  width: 100px;
+  font-size: 11px;
+}
+/* line 80, ../../../scss/sass/store.scss */
+#b-store #b-store-sales td.goods {
+  padding-left: 20px;
+}
+/* line 84, ../../../scss/sass/store.scss */
+#b-store #b-store-sales .carousel li {
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}

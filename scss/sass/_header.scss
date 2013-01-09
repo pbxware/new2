@@ -1,0 +1,43 @@
+#b-header {
+    height: 88px;
+    padding-top: 10px;
+    #b-header-sitelogo {
+        float: left;
+        width: 240px;
+    }
+    #b-nav-header {
+        float: right;
+        width: $width-site - 240px;
+        text-align: right;
+        #b-header-nav-top {
+            padding-top: 5px;
+            height: 20px;
+            ul.b-nav-container {
+                li {
+                    float: right;
+                    margin: 0 15px;
+                    input.search-field {
+                        margin-top: -5px;
+                    }
+                }
+            }
+        }
+        #b-header-nav-bottom {
+            margin-top: 30px;
+            height: 20px;
+            margin-right: 100px;
+            ul.b-nav-container {
+                li {
+                    float: right;
+                    margin: 0 18px;
+                    a {
+                        font-size: 14px;
+                    }
+                    a.active {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}

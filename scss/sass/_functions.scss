@@ -1,0 +1,11 @@
+// Background property support for vendor prefixing within values.
+@mixin background(
+  $url,
+  $repeat: no-repeat,
+  $color: transparent,
+  $scrolling: scroll,
+  $h-pos: left,
+  $v-pos: top
+) {
+  background: url($url) $repeat $scrolling $h-pos $v-pos $color;
+}

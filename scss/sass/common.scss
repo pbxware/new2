@@ -1,0 +1,47 @@
+@import "compass/reset";
+@import "compass/typography/links/link-colors";
+@import "compass/css3/box-shadow";
+@import "functions";
+
+$fonts: verdana,helvetica,arial,sans-serif;;
+$font-size: 12px;
+$font-color: #3B3737;
+$width-site: 1024px;
+$link-hover-color: black;
+
+body {
+    font-family: $fonts;
+    font-size: $font-size;
+    color: $font-color;
+}
+
+.wrapper-base {
+    width: $width-site;
+    margin-left: 25px;
+}
+
+a { 
+    @include link-colors($font-color, $link-hover-color);
+    text-decoration: underline; 
+}
+
+ul.b-nav-container {
+    list-style: none;
+    li {
+        float: left;
+        .active-item {
+            font-weight: bold;
+        }
+    }
+}
+
+h1, h2, h3, h4, strong {
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 12px;
+}
+
+@import "header";
+@import "footer";

@@ -1,0 +1,10 @@
+{% load tree_menu_tags %}
+
+if menu_type == "mainmenu"
+    ul.b-nav-container
+        for menu_item in menu.root_item.children_active_desc
+            li
+                if menu_item|item_is_select:request.path
+                    a.active-item(href="{{ menu_item.url }}") {{ menu_item.caption }}
+                else
+                    a(href="{{ menu_item.url }}") {{ menu_item.caption }}
