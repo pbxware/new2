@@ -1,0 +1,44 @@
+{% load settings_tags %}
+{% load tree_menu_tags %}
+{% load sekizai_tags %}
+!!! 5
+html
+    head
+        meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+        title
+            {% settings_value 'template_blocks' 'title' %}
+        meta(name="description", content="{% settings_value 'template_blocks' 'meta_description' %}")
+        meta(name="keywords", content="{% settings_value 'template_blocks' 'meta_keywords' %}")
+        link(rel="stylesheet", href="{{ MEDIA_URL }}css/common.css")
+        script(type="text/javascript", src="{{ STATIC_URL }}lib/jquery-1.8.0.min.js")
+        block header
+
+        script(type="text/javascript")
+            window.csrf_token = '{{ csrf_token }}';
+            $(document).ready(function(){
+                {% render_block "jQuery" %}
+            });
+    body
+        header#b-header.wrapper-base
+            div#b-header-sitelogo
+                a(href="/", title="Logo")
+                    img(src="{{ MEDIA_URL }}/images/logo.png")
+            div#b-nav-header
+                div#b-header-nav-top
+                    ul.b-nav-container
+                        li
+                            input.search-field(type="text", value="Поиск...")
+                        li
+                            a(href="/") Связаться
+                        li
+                            a(href="/") Вход / Регистрация
+                        li
+                            a(href="/") Корзина
+                div#b-header-nav-bottom
+                    ul.b-nav-container
+                        {% show_menu "MainMenu" "mainmenu" %}
+        section#b-section.wrapper-base
+            block middle-block   
+        footer#b-footer.wrapper-base
+            p.footer-text 
+                {% settings_value 'template_blocks' 'footer' %}

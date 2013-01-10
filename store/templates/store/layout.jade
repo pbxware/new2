@@ -1,0 +1,42 @@
+extends layout
+
+block append header
+    link(rel="stylesheet", href="{{ MEDIA_URL }}/css/store.css")
+
+block middle-block
+    div#b-store
+        div#b-store-block-left
+            div#b-nav-equipment
+                a(href="/") Навигатор по оборудованию
+            ul.b-store-menu
+                li
+                    a.store-menu-item(href="/store/cat") Платы Digium
+                li
+                    a.store-menu-item(href="/store/cat") Телефоны
+                li
+                    a.store-menu-item(href="/store/cat") IP ATC
+                li
+                    a.store-menu-item(href="/store/cat") Шлюзы
+                li
+                    a.store-menu-item(href="/store/cat") IVR
+            br
+            ul.b-store-menu
+                li
+                    a.store-menu-item.small(href="/") Оплата
+                li
+                    a.store-menu-item.small(href="/") Доставка
+                li
+                    a.store-menu-item.small(href="/") Контакты
+                li
+                    a.store-menu-item.small(href="/") О Магазине
+        
+        div#b-store-block-right
+            div.breadcrumb.line-description
+                Магазин оборудования для Asterisk
+
+            div#b-store-content
+                block store-block
+
+        div(style="clear: both;")
+        div#b-store-bottom-content
+            block store-bottom-block
