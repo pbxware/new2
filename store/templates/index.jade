@@ -1,18 +1,16 @@
-extends base
+extends layout
+{% load sekizai_tags %}
+{% load settings_tags %}
 
 block header
     script(type="text/javascript", src="{{ STATIC_URL }}lib/nivo.slider/jquery.nivo.slider.pack.js")
     link(rel="stylesheet", href="{{ STATIC_URL }}lib/nivo.slider/nivo-slider.css")
     link(rel="stylesheet", href="{{ STATIC_URL }}lib/nivo.slider/themes/default/default.css")
-    script
-        $(document).ready(function(){
-            $('#slider').nivoSlider({
-                pauseTime: 10000,
-                pauseOnHover: false, 
-            });
-        });
+    {% addtoblock "jQuery" %}
+    $('#slider').nivoSlider({ pauseTime: {% settings_value 'template_blocks' 'refresh_interval_slider' %}, pauseOnHover: false, });
+    {% endaddtoblock %}
 
-block main-content
+block middle-block
     div.theme-default
         div#slider.nivoSlider
             img(src="{{ STATIC_URL }}images/Asterisk.png")

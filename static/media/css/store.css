@@ -106,3 +106,17 @@
   width: 200px;
   height: 100px;
 }
+
+/* line 3, ../../../scss/sass/store/_category.scss */
+#b-store-content
+.b-category-description
+.image {
+  float: left;
+  margin-right: 20px;
+}
+
+/* line 7, ../../../scss/sass/store/_category.scss */
+.description {
+  float: left;
+  width: 550px;
+}

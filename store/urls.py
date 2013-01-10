@@ -42,7 +42,10 @@ urlpatterns = patterns('',
         'template': 'index.jade'
     }),
     url(r'^store/$', direct_to_template, {
-        'template': 'store.jade'
+        'template': 'store/index.jade'
+    }),
+    url(r'^store/cat$', direct_to_template, {
+        'template': 'store/category.jade'
     }),
 )
 
