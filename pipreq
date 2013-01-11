@@ -1,0 +1,10 @@
+Django==1.4.3
+argparse==1.2.1
+distribute==0.6.24
+django-classy-tags==0.3.4.1
+django-keyedcache==1.4-6
+django-livesettings==1.4-12
+django-sekizai==0.6.1
+django-treemenus==0.8.7
+pyjade==1.9
+wsgiref==0.1.2
