@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /settings/
+Disallow: /static/
+Disallow: /tinymce/
+Disallow: /admin_tools/
+Disallow: /settings/
+Disallow: /captcha/
+Disallow: /extensions/
+Disallow: /accounts/
+Disallow: /location/
