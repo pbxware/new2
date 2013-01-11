@@ -37,7 +37,7 @@
 }
 /* line 32, ../../../scss/sass/store.scss */
 #b-store #b-store-block-right {
-  width: 795px;
+  width: 755px;
   float: left;
   margin-left: 45px;
 }
@@ -71,7 +71,7 @@
 #b-store #b-store-main-page .item .description {
   font-size: 11px;
   float: left;
-  width: 250px;
+  width: 240px;
   line-height: 16px;
 }
 /* line 63, ../../../scss/sass/store.scss */
@@ -107,16 +107,39 @@
   height: 100px;
 }
 
-/* line 3, ../../../scss/sass/store/_category.scss */
+/* line 2, ../../../scss/sass/store/_category.scss */
 #b-store-content
-.b-category-description
-.image {
-  float: left;
-  margin-right: 20px;
+.b-category-description {
+  margin-top: 45px;
+  overflow: hidden;
 }
-
-/* line 7, ../../../scss/sass/store/_category.scss */
-.description {
+/* line 5, ../../../scss/sass/store/_category.scss */
+#b-store-content
+.b-category-description .image {
+  float: left;
+  margin-right: 25px;
+}
+/* line 9, ../../../scss/sass/store/_category.scss */
+#b-store-content
+.b-category-description .description {
   float: left;
   width: 550px;
+  font-family: "Verdana";
+  font-size: 14px;
+  line-height: 16px;
+}
+
+/* line 17, ../../../scss/sass/store/_category.scss */
+.b-category-children-list {
+  margin-top: 70px;
+}
+/* line 19, ../../../scss/sass/store/_category.scss */
+.b-category-children-list table {
+  margin: auto;
+}
+/* line 21, ../../../scss/sass/store/_category.scss */
+.b-category-children-list table td {
+  text-align: center;
+  padding: 10px;
+  width: 150px;
 }

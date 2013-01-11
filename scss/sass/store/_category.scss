@@ -1,10 +1,27 @@
 #b-store-content
-    .b-category-description
+    .b-category-description {
+        margin-top: 45px;
+        overflow: hidden;
         .image {
             float: left;
-            margin-right: 20px;
+            margin-right: 25px;
         }
         .description {
             float: left;
             width: 550px;
+            font-family: "Verdana";
+            font-size: 14px;
+            line-height: 16px;
         }
+    }
+    .b-category-children-list {
+        margin-top: 70px;
+        table {
+            margin: auto;
+            td {
+                text-align: center;
+                padding: 10px;
+                width: 150px;
+            }
+        }
+    }
