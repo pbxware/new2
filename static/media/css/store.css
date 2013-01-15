@@ -40,67 +40,68 @@
   width: 755px;
   float: left;
   margin-left: 45px;
+  margin-bottom: 10px;
 }
-/* line 36, ../../../scss/sass/store.scss */
+/* line 37, ../../../scss/sass/store.scss */
 #b-store #b-store-block-right .breadcrumb {
   margin-bottom: 20px;
 }
-/* line 39, ../../../scss/sass/store.scss */
+/* line 40, ../../../scss/sass/store.scss */
 #b-store #b-store-block-right .line-description {
   font-size: 11px;
 }
-/* line 43, ../../../scss/sass/store.scss */
+/* line 44, ../../../scss/sass/store.scss */
 #b-store #b-store-main-page {
   width: 100%;
 }
-/* line 45, ../../../scss/sass/store.scss */
+/* line 46, ../../../scss/sass/store.scss */
 #b-store #b-store-main-page td {
   width: 50%;
   padding: 10px 10px 25px;
 }
-/* line 49, ../../../scss/sass/store.scss */
+/* line 50, ../../../scss/sass/store.scss */
 #b-store #b-store-main-page .item {
   display: block;
 }
-/* line 51, ../../../scss/sass/store.scss */
+/* line 52, ../../../scss/sass/store.scss */
 #b-store #b-store-main-page .item .image {
   float: left;
   margin-right: 15px;
 }
-/* line 55, ../../../scss/sass/store.scss */
+/* line 56, ../../../scss/sass/store.scss */
 #b-store #b-store-main-page .item .description {
   font-size: 11px;
   float: left;
   width: 240px;
   line-height: 16px;
 }
-/* line 63, ../../../scss/sass/store.scss */
+/* line 64, ../../../scss/sass/store.scss */
 #b-store #b-store-sales {
   width: 100%;
   margin: 25px 0;
 }
-/* line 66, ../../../scss/sass/store.scss */
+/* line 67, ../../../scss/sass/store.scss */
 #b-store #b-store-sales td {
   vertical-align: middle;
   padding: 5px;
 }
-/* line 70, ../../../scss/sass/store.scss */
+/* line 71, ../../../scss/sass/store.scss */
 #b-store #b-store-sales td.title {
   text-align: right;
   font-weight: bold;
   width: 170px;
 }
-/* line 75, ../../../scss/sass/store.scss */
+/* line 76, ../../../scss/sass/store.scss */
 #b-store #b-store-sales td.links {
   padding-left: 50px;
   width: 100px;
   font-size: 11px;
 }
-/* line 80, ../../../scss/sass/store.scss */
+/* line 81, ../../../scss/sass/store.scss */
 #b-store #b-store-sales td.goods {
   padding-left: 20px;
 }
-/* line 84, ../../../scss/sass/store.scss */
+/* line 85, ../../../scss/sass/store.scss */
 #b-store #b-store-sales .carousel li {
   text-align: center;
   width: 200px;
@@ -142,4 +143,109 @@
   text-align: center;
   padding: 10px;
   width: 150px;
+}
+
+/* line 28, ../../../scss/sass/store/_category.scss */
+.b-products-top-nav {
+  margin-top: 28px;
+  font-size: 11px;
+  overflow: hidden;
+}
+/* line 32, ../../../scss/sass/store/_category.scss */
+.b-products-top-nav .b-products-top-nav-info {
+  float: left;
+  padding: 3px;
+}
+/* line 36, ../../../scss/sass/store/_category.scss */
+.b-products-top-nav .b-products-top-nav-options {
+  float: right;
+}
+/* line 38, ../../../scss/sass/store/_category.scss */
+.b-products-top-nav .b-products-top-nav-options a {
+  display: block;
+  float: left;
+  padding: 3px;
+  border-radius: 6px 2px 7px 2px;
+  background-color: #EAEAEA;
+  margin: 0 5px;
+  text-decoration: none;
+}
+/* line 47, ../../../scss/sass/store/_category.scss */
+.b-products-top-nav .b-products-top-nav-options .text {
+  float: left;
+  padding: 3px;
+}
+/* line 51, ../../../scss/sass/store/_category.scss */
+.b-products-top-nav .b-products-top-nav-options .b-slider {
+  float: left;
+  margin-left: 10px;
+}
+/* line 54, ../../../scss/sass/store/_category.scss */
+.b-products-top-nav .b-products-top-nav-options .b-slider .slider {
+  background-image: url("../images/slider-bg.png");
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+/* line 59, ../../../scss/sass/store/_category.scss */
+.b-products-top-nav .b-products-top-nav-options .b-slider .slider-start {
+  padding-left: 7px;
+  background-position: 0 -22px;
+}
+/* line 63, ../../../scss/sass/store/_category.scss */
+.b-products-top-nav .b-products-top-nav-options .b-slider .slider-end {
+  padding-right: 7px;
+  background-position: 100% -44px;
+}
+/* line 67, ../../../scss/sass/store/_category.scss */
+.b-products-top-nav .b-products-top-nav-options .b-slider .slider-inner {
+  width: 96px;
+  height: 22px;
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  position: relative;
+  left: 0;
+  top: 0;
+  overflow: visible;
+}
+/* line 77, ../../../scss/sass/store/_category.scss */
+.b-products-top-nav .b-products-top-nav-options .b-slider .slider-thumb {
+  background: transparent url("../images/slider-thumb.png") scroll no-repeat 0 0;
+  height: 15px;
+  width: 14px;
+  position: absolute;
+  top: 3px;
+}
+
+/* line 87, ../../../scss/sass/store/_category.scss */
+.b-products-list {
+  margin-top: 20px;
+}
+/* line 90, ../../../scss/sass/store/_category.scss */
+.b-products-list table td {
+  text-align: center;
+  padding: 15px;
+  width: 158px;
+}
+/* line 97, ../../../scss/sass/store/_category.scss */
+.b-products-list .info div {
+  margin: 5px;
+}
+/* line 103, ../../../scss/sass/store/_category.scss */
+.b-products-list .info div.sale-price {
+  color: #FF0000;
+}
+/* line 106, ../../../scss/sass/store/_category.scss */
+.b-products-list .info div.old-price {
+  text-decoration: line-through;
+}
+/* line 110, ../../../scss/sass/store/_category.scss */
+.b-products-list a.acessory {
+  display: block;
+  text-decoration: none;
+}
+
+/* line 118, ../../../scss/sass/store/_category.scss */
+.b-products-nav {
+  float: right;
+  margin-top: 15px;
 }

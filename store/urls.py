@@ -47,6 +47,9 @@ urlpatterns = patterns('',
     url(r'^store/cat$', direct_to_template, {
         'template': 'store/category.jade'
     }),
+    url(r'^store/cat/prods$', direct_to_template, {
+        'template': 'store/products.jade'
+    }),
 )
 
 if settings.DEBUG:

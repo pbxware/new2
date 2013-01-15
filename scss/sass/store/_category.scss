@@ -25,3 +25,97 @@
             }
         }
     }
+    .b-products-top-nav {
+        margin-top: 28px;
+        font-size: 11px;
+        overflow: hidden;
+        .b-products-top-nav-info {
+            float: left;
+            padding: 3px;
+        }
+        .b-products-top-nav-options {
+            float: right;
+            a {
+                display: block;
+                float: left;
+                padding: 3px;
+                border-radius: 6px 2px 7px 2px;
+                background-color: #EAEAEA;
+                margin: 0 5px;
+                text-decoration: none;
+            }
+            .text {
+                float: left;
+                padding: 3px;
+            }
+            .b-slider {
+                float: left;
+                margin-left: 10px;
+                .slider {
+                    background-image: url("../images/slider-bg.png");
+                    background-color: transparent;
+                    background-repeat: no-repeat;
+                }
+                .slider-start {
+                    padding-left: 7px;
+                    background-position: 0 -22px;
+                }
+                .slider-end {
+                    padding-right:7px;
+                    background-position:100% -44px;
+                }
+                .slider-inner {
+                    width: 96px;
+                    height: 22px;
+                    background-position:0 0;
+                    background-repeat: repeat-x;
+                    position:relative;
+                    left: 0;
+                    top: 0;
+                    overflow:visible;
+                }
+                .slider-thumb {
+                    background: transparent url("../images/slider-thumb.png") scroll no-repeat 0 0;
+                    height:15px;
+                    width: 14px;
+                    position: absolute;
+                    top: 3px;
+                }
+            }
+        }
+    }
+    .b-products-list {
+        margin-top: 20px;
+        table {
+            td {
+                text-align: center;
+                padding: 15px;
+                width: 158px;
+            }
+        }
+        .info {
+            div {
+                margin: 5px;
+            }
+            div.sale {
+
+            }
+            div.sale-price {
+                color: #FF0000;
+            }
+            div.old-price {
+                text-decoration: line-through;
+            }
+        }
+        a.acessory {
+            display: block;
+            text-decoration: none;
+        }
+        img {
+
+        }
+    }
+    .b-products-nav {
+        float: right;
+        margin-top: 15px;
+    }
