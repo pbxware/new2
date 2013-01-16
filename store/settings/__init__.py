@@ -2,6 +2,7 @@
 from common_settings import *
 from local_settings import *
 
+from jade_settings import *
 #from search_settings import *
 
 #CMS

@@ -1,0 +1,54 @@
+extends store/layout
+{% load sekizai_tags %}
+
+
+block append header
+    {% addtoblock "jQuery" %}
+    :text
+        $(".bar-item").click(function(){ 
+            $(this).parent().siblings().each(function(){
+                $(this).children().removeClass("active");
+            });
+            $(this).addClass("active");
+            var tabClass = $(this).attr("href");
+            $(this).parents(".tab-bar").nextAll().hide();
+            $(this).parents(".tab-bar").nextAll(tabClass).show();
+            return false;
+        });
+    {% endaddtoblock %}
+
+
+block store-block
+    h1.title Плата Digium TE121P
+
+    div#b-tabs-top
+        ul.tab-bar
+            li 
+                a.bar-item.active(href=".tab1") Основное
+            li 
+                a.bar-item(href=".tab2") Характеристики
+            li 
+                a.bar-item(href=".tab3") Документация
+            li 
+                a.bar-item(href=".tab4") База знаний
+
+        div.tab.tab1(style="display: block;")
+            img(src="{{ STATIC_URL }}images/39e8d192c76ff8a0210749fbe1f32578.jpg")
+        div.tab.tab2 Количество Е1 портов 1
+        div.tab.tab3 
+            a(href="#") TE120 Quick start
+        div.tab.tab4
+            a(href="#") Решения -> Подключение Asterisk к потоку E1 (how-to)
+
+    div#b-tabs-bottom
+        ul.tab-bar
+            li 
+                a.bar-item.active(href=".tab1") Дополнения
+            li 
+                a.bar-item(href=".tab2") Модификации
+            li 
+                a.bar-item(href=".tab3") Аналоговые товары
+
+        div.tab.tab1(style="display: block;") tab 1
+        div.tab.tab2 tab 2
+        div.tab.tab3 tab 3
