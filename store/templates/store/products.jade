@@ -1,6 +1,15 @@
 extends store/layout
 {% load sekizai_tags %}
 
+block append header
+    script(type="text/javascript", src="{{ STATIC_URL }}lib/kendo/kendo.core.min.js")
+    script(type="text/javascript", src="{{ STATIC_URL }}lib/kendo/kendo.web.min.js")
+    link(rel="stylesheet", href="{{ STATIC_URL }}lib/kendo/kendo.common.min.css")
+    link(rel="stylesheet", href="{{ STATIC_URL }}lib/kendo/kendo.uniform.min.css")
+    {% addtoblock "jQuery" %}
+    $("#slider").kendoSlider({min: 12, max: 36, smallStep: 12, largeStep: 12, showButtons: false });
+    {% endaddtoblock %}
+        
 block store-block
     div.b-products-top-nav
         div.b-products-top-nav-info
@@ -8,13 +17,13 @@ block store-block
         div.b-products-top-nav-options
             div.text
                 Позиций на странице 
-            div.b-slider
-                div.slider.slider-start
-                    div.slider.slider-end
-                        div.slider.slider-inner
-                            div.slider-thumb
 
+            div.b-slider
+                input#slider(value="12")
+                
     div.b-products-list
+        div(style="width:100px;")
+            
         table
             tr
                 td

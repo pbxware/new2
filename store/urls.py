@@ -50,6 +50,9 @@ urlpatterns = patterns('',
     url(r'^store/cat/prods$', direct_to_template, {
         'template': 'store/products.jade'
     }),
+    url(r'^store/nav$', direct_to_template, {
+        'template': 'store/navigator.jade'
+    }),
 )
 
 if settings.DEBUG:

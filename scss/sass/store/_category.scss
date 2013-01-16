@@ -1,4 +1,4 @@
-#b-store-content
+#b-store-content {
     .b-category-description {
         margin-top: 45px;
         overflow: hidden;
@@ -35,7 +35,7 @@
         }
         .b-products-top-nav-options {
             float: right;
-            a {
+            /*a {
                 display: block;
                 float: left;
                 padding: 3px;
@@ -43,15 +43,20 @@
                 background-color: #EAEAEA;
                 margin: 0 5px;
                 text-decoration: none;
-            }
+            }*/
             .text {
                 float: left;
                 padding: 3px;
             }
+            #slider{
+                width: 100px;
+            }
+
             .b-slider {
                 float: left;
                 margin-left: 10px;
-                .slider {
+            
+                /*.slider {
                     background-image: url("../images/slider-bg.png");
                     background-color: transparent;
                     background-repeat: no-repeat;
@@ -80,7 +85,7 @@
                     width: 14px;
                     position: absolute;
                     top: 3px;
-                }
+                }*/
             }
         }
     }
@@ -119,3 +124,15 @@
         float: right;
         margin-top: 15px;
     }
+    #treeView {
+        .k-sprite {
+            background-image:  url("../../images/coloricons-sprite.png");
+            background-repeat: no-repeat;
+        }
+        .rootfolder { background-position: 0 0; }
+        .folder { background-position: 0 -16px; }
+        .pdf { background-position: 0 -32px; }
+        .html { background-position: 0 -48px; }
+        .image { background-position: 0 -64px; }
+    }      
+}
