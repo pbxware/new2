@@ -1,0 +1,10 @@
+{% load catalog_menu_tags %}
+{% load djantix_tags %}
+ul
+    for child_item in  menu_item.children_active
+        li.b-store-menu-item
+            a.store-menu-item(
+                href="{{ child_item.get_absolute_url }}", 
+                style="padding-left: {{child_item.get_level|multi:10|add:10}}px") #{child_item.name}
+            if child_item in categories and child_item.has_active_children
+                {% show_menu_item child_item %}

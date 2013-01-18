@@ -1,0 +1,7 @@
+{% load catalog_menu_tags %}
+ul.b-store-menu
+    for root_item in root_categories
+        li.b-store-menu-item
+            a.store-menu-item(href="{{ root_item.get_absolute_url }}") #{root_item.name}
+            if root_item in categories and root_item.has_active_children
+                {% show_menu_item root_item %}

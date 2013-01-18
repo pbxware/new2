@@ -17,16 +17,17 @@
                 border-style: solid;
                 border-width: 1px 1px 0 1px;
                 display: block;
-                height: 36px;
+                height: 12px;
                 padding: 10px;
                 text-decoration: none;
             }
-            a.small {
-                height: 12px;
-            }
             a.store-menu-item:hover {
                 background-color: #EAEAEA;
-            };
+            }
+            li.b-store-menu-item {}
+            a.children {
+                padding-left: 25px;
+            }
         }
     }
     #b-store-block-right {

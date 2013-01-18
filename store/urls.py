@@ -7,7 +7,7 @@ from django.contrib import admin
 #from catalog.sitemaps import CategorySitemap, ProductSitemap
 
 #tmp
-from django.views.generic.simple import direct_to_template
+#from django.views.generic.simple import direct_to_template
 
 admin.autodiscover()
 
@@ -38,24 +38,27 @@ urlpatterns = patterns('',
     #url(r'^shop/', include('store.shop.urls', namespace='shop')),
     #url(r'^', include('cms.urls')),  # dkjango cms
 
-    url(r'^$', direct_to_template, {
-        'template': 'index.jade'
-    }),
-    url(r'^store/$', direct_to_template, {
-        'template': 'store/index.jade'
-    }),
-    url(r'^store/cat$', direct_to_template, {
-        'template': 'store/category.jade'
-    }),
-    url(r'^store/cat/prods$', direct_to_template, {
-        'template': 'store/products.jade'
-    }),
-    url(r'^store/cat/prod$', direct_to_template, {
-        'template': 'store/product.jade'
-    }),
-    url(r'^store/nav$', direct_to_template, {
-        'template': 'store/navigator.jade'
-    }),
+    url(r'^store/', include('store.catalog.urls', namespace='store')),
+
+
+    #url(r'^$', direct_to_template, {
+    #    'template': 'index.jade'
+    #}),
+    #url(r'^store/$', direct_to_template, {
+    #    'template': 'store/index.jade'
+    #}),
+    #url(r'^store/cat$', direct_to_template, {
+    #    'template': 'store/category.jade'
+    #}),
+    #url(r'^store/cat/prods$', direct_to_template, {
+    #    'template': 'store/products.jade'
+    #}),
+    #url(r'^store/cat/prod$', direct_to_template, {
+    #    'template': 'store/product.jade'
+    #}),
+    #url(r'^store/nav$', direct_to_template, {
+    #    'template': 'store/navigator.jade'
+    #}),
 )
 
 if settings.DEBUG:

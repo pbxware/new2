@@ -87,15 +87,14 @@ INSTALLED_APPS = [
     'django.contrib.redirects',
     'django.contrib.admin',
 
+    'djantix',
     'sekizai',
     'livesettings',
     'livesettings_ext',
-
+    'sorl.thumbnail',
     'treemenus',
-
+    'mptt',
     'store',
-
-    #'mptt',
 
     #'simple404log',
 
@@ -111,12 +110,16 @@ INSTALLED_APPS = [
     #'memcache_status',
     #
     #'django_extensions'
+
+    'djantix'
 ]
 
 #AUTH_PROFILE_MODULE = 'account.Profile'
 
 LOGIN_URL = '/accounts/login/'
 LOGOUT_URL = '/accounts/logout/'
+
+THUMBNAIL_DEBUG = True
 
 # bust detector
 #FORM_BUST_INTERVAL = 60

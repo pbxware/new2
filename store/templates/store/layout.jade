@@ -1,4 +1,5 @@
 extends layout
+{% load catalog_menu_tags %}
 
 block append header
     link(rel="stylesheet", href="{{ MEDIA_URL }}css/store.css")
@@ -8,27 +9,18 @@ block middle-block
         div#b-store-block-left
             div#b-nav-equipment
                 a(href="/store/nav") Навигатор по оборудованию
-            ul.b-store-menu
-                li
-                    a.store-menu-item(href="/store/cat") Платы Digium
-                li
-                    a.store-menu-item(href="/store/cat") Телефоны
-                li
-                    a.store-menu-item(href="/store/cat") IP ATC
-                li
-                    a.store-menu-item(href="/store/cat") Шлюзы
-                li
-                    a.store-menu-item(href="/store/cat") IVR
-            br
-            ul.b-store-menu
-                li
-                    a.store-menu-item.small(href="/") Оплата
-                li
-                    a.store-menu-item.small(href="/") Доставка
-                li
-                    a.store-menu-item.small(href="/") Контакты
-                li
-                    a.store-menu-item.small(href="/") О Магазине
+            div
+                {% show_catalog_menu category %}   
+                br
+                ul.b-store-menu
+                    li
+                        a.store-menu-item(href="/") Оплата
+                    li
+                        a.store-menu-item(href="/") Доставка
+                    li
+                        a.store-menu-item(href="/") Контакты
+                    li
+                        a.store-menu-item(href="/") О Магазине
         
         div#b-store-block-right
             div.breadcrumb.line-description
