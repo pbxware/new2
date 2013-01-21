@@ -1,0 +1,94 @@
+extends store/layout
+{% load thumbnail %}
+{% load sekizai_tags %}
+
+block append header
+    script(type="text/javascript", src="{{ STATIC_URL }}lib/kendo/kendo.core.min.js")
+    script(type="text/javascript", src="{{ STATIC_URL }}lib/kendo/kendo.web.min.js")
+    link(rel="stylesheet", href="{{ STATIC_URL }}lib/kendo/kendo.common.min.css")
+    link(rel="stylesheet", href="{{ STATIC_URL }}lib/kendo/kendo.uniform.min.css")
+    link(rel="stylesheet", href="{{ MEDIA_URL }}css/store/category.css")
+    {% addtoblock "jQuery" %}
+    :text
+        $("#slider").kendoSlider({
+            min: 12, 
+            max: 36, 
+            smallStep: 12, 
+            largeStep: 12, 
+            showButtons: false 
+        });
+    {% endaddtoblock %}
+
+
+block breadcrumb
+    for p_cat in category.parents
+        |  >>
+        a(href="{{ p_cat.get_absolute_url }}") {{ p_cat.name }}
+    |  >> {{ category.name }}
+
+
+block store-block
+    div#b-products-top-nav
+        div.b-products-top-nav-info
+            Всего 76 товаров
+        div.b-products-top-nav-options
+            div.text
+                Позиций на странице 
+
+            div.b-slider
+                input#slider(value="12")
+    div(style="clear:both;")
+
+    div#b-products-list
+        a.acessory(href="/store/cat/prod")
+            img.image(src="{{ STATIC_URL}}images/2f86b353c775df4068a4bad895a89d3b.jpg", width="100")
+            div.info
+                div.title GXP120
+                div.desc 2 SIP линии, PoE
+                div.price 1,438 руб.
+
+        a.acessory(href="/store/cat/prod")
+            img.image(src="{{ STATIC_URL}}images/2f86b353c775df4068a4bad895a89d3b.jpg", width="100")
+            div.info
+                div.title GXP120
+                div.desc 2 SIP линии, PoE
+                div.price 1,438 руб.
+
+        a.acessory(href="/store/cat/prod")
+            img.image(src="{{ STATIC_URL}}images/2f86b353c775df4068a4bad895a89d3b.jpg", width="100")
+            div.info
+                div.title GXP120
+                div.desc 2 SIP линии, PoE
+                div.price 1,438 руб.
+
+        a.acessory(href="/store/cat/prod")
+            img.image(src="{{ STATIC_URL}}images/2f86b353c775df4068a4bad895a89d3b.jpg", width="100")
+            div.info
+                div.title GXP120
+                div.desc 2 SIP линии, PoE
+                div.price 1,438 руб.
+
+        a.acessory(href="/store/cat/prod")
+            img.image(src="{{ STATIC_URL}}images/2f86b353c775df4068a4bad895a89d3b.jpg", width="100")
+            div.info
+                div.title GXP120
+                div.desc 2 SIP линии, PoE
+                div.price 1,438 руб.
+
+    div(style="clear:both;")
+    div#b-products-padding
+        a(href="#") В начало
+        |  | 
+        a(href="#") Назад
+        |  |
+        a(href="#") 1
+        |  |
+        a(href="#") 2
+        |  | ... |
+        a(href="#") 6
+        |  |
+        a(href="#") 7
+        |  |
+        a(href="#") Вперед
+        |  |
+        a(href="#") В конец

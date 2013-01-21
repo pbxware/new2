@@ -91,27 +91,20 @@ INSTALLED_APPS = [
     'sekizai',
     'livesettings',
     'livesettings_ext',
-    'sorl.thumbnail',
     'treemenus',
+    'sorl.thumbnail',
     'mptt',
     'store',
 
     #'simple404log',
-
     #'keyedcache',
-
     #'sorl.thumbnail',
     #'djantix',
     #'rosetta',
-
     #'ya_catalog',
-
     #'oot'
     #'memcache_status',
-    #
     #'django_extensions'
-
-    'djantix'
 ]
 
 #AUTH_PROFILE_MODULE = 'account.Profile'
@@ -119,8 +112,7 @@ INSTALLED_APPS = [
 LOGIN_URL = '/accounts/login/'
 LOGOUT_URL = '/accounts/logout/'
 
-THUMBNAIL_DEBUG = True
-
+#THUMBNAIL_DEBUG = True
 # bust detector
 #FORM_BUST_INTERVAL = 60
 #FORM_BUST_COUNT = 3

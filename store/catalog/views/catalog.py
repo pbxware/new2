@@ -11,6 +11,15 @@ def index(request):
 
 def category(request, slug):
     category = get_object_or_404(Category, external_slug=slug, is_active=True)
-    return render(request, 'store/catalog/category.jade', {
-        'category': category,
-    })
+    if category.has_active_children():
+        return render(request, 'store/catalog/category.jade', {
+            'category': category,
+        })
+    else:
+        return render(request, 'store/catalog/category_list.jade', {
+            'category': category,
+        })
+
+
+def navigator(request):
+    pass

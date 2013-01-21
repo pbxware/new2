@@ -7,7 +7,11 @@ block header
     link(rel="stylesheet", href="{{ STATIC_URL }}lib/nivo.slider/nivo-slider.css")
     link(rel="stylesheet", href="{{ STATIC_URL }}lib/nivo.slider/themes/default/default.css")
     {% addtoblock "jQuery" %}
-    $('#slider').nivoSlider({ pauseTime: {% settings_value 'template_blocks' 'refresh_interval_slider' %}, pauseOnHover: false, });
+    :text
+        $('#slider').nivoSlider({ 
+            pauseTime: {% settings_value 'template_blocks' 'refresh_interval_slider' 10000 %}, 
+            pauseOnHover: false, 
+        });
     {% endaddtoblock %}
 
 block middle-block

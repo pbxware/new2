@@ -8,23 +8,27 @@ block middle-block
     div#b-store
         div#b-store-block-left
             div#b-nav-equipment
-                a(href="/store/nav") Навигатор по оборудованию
-            div
+                a(href="{% url store:navigator %}") Навигатор по оборудованию
+            div#b-nav-menu
                 {% show_catalog_menu category %}   
                 br
                 ul.b-store-menu
                     li
-                        a.store-menu-item(href="/") Оплата
+                        a.store-menu-item(href="#") Оплата
                     li
-                        a.store-menu-item(href="/") Доставка
+                        a.store-menu-item(href="#") Доставка
                     li
-                        a.store-menu-item(href="/") Контакты
+                        a.store-menu-item(href="#") Контакты
                     li
-                        a.store-menu-item(href="/") О Магазине
+                        a.store-menu-item(href="#") О Магазине
         
         div#b-store-block-right
             div.breadcrumb.line-description
-                Магазин оборудования для Asterisk
+                if category
+                    a(href="{% url store:index %}") Магазин оборудования для Asterisk
+                else
+                    Магазин оборудования для Asterisk
+                block breadcrumb
 
             div#b-store-content
                 block store-block

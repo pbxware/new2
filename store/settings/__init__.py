@@ -2,7 +2,7 @@
 from common_settings import *
 from local_settings import *
 
-from jade_settings import *
+import jade_settings
 #from search_settings import *
 
 #CMS
@@ -16,6 +16,6 @@ from store_settings import *
 
 #Admin
 #from admin_tools_settings import *
-from tiny_mce_settings import *
+#from tiny_mce_settings import *
 #if DEBUG:
 #    from debug_toolbar_settings import *

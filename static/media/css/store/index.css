@@ -1,0 +1,75 @@
+/* line 2, ../../../../scss/sass/store/index.scss */
+#b-mainpage-items a.b-item-main-page {
+  display: block;
+  float: left;
+  width: 335px;
+  margin: 20px;
+}
+/* line 7, ../../../../scss/sass/store/index.scss */
+#b-mainpage-items a.b-item-main-page .image {
+  float: left;
+  margin-right: 15px;
+}
+/* line 11, ../../../../scss/sass/store/index.scss */
+#b-mainpage-items a.b-item-main-page .description {
+  font-size: 11px;
+  float: left;
+  width: 220px;
+  line-height: 16px;
+}
+
+/*
+    overflow: hidden;
+    #b-store-main-page {
+        width: 100%;
+        td {
+            width: 50%;
+            padding: 10px 10px 25px;
+        }
+        .item {
+            display: block;
+            .image {
+                float: left;
+                margin-right: 15px;
+            }
+            .description {
+                font-size: 11px;
+                float: left;
+                width: 240px;
+                line-height: 16px;
+            }
+        }
+    }
+    #b-store-sales {
+        width: 100%;
+        margin: 25px 0;
+        td {
+            vertical-align: middle;
+            padding: 5px;
+        }
+        td.title {
+            text-align: right;
+            font-weight: bold;
+            width: 170px;
+        }
+        td.links {
+            padding-left: 50px;
+            width: 100px;
+            font-size: 11px;
+        }
+        td.goods {
+            padding-left: 20px;
+        }
+        .carousel {
+            li {
+                text-align: center;
+                width: 200px;
+                height: 100px;
+            }
+        }
+    }
+}
+
+@import "store/category";
+@import "store/product";
+*/

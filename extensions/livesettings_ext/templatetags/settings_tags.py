@@ -6,8 +6,11 @@ register = template.Library()
 
 
 @register.simple_tag
-def settings_value(group, key):
+def settings_value(group, key, default=None):
     try:
         return livesettings.config_value(group, key)
     except livesettings.SettingNotSet:
-        return ''
+        if default:
+            return default
+        else:
+            return ''

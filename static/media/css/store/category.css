@@ -1,0 +1,91 @@
+/* line 2, ../../../../scss/sass/store/category.scss */
+#b-store-content .b-category-description {
+  margin-top: 45px;
+  overflow: hidden;
+  font-family: "Verdana";
+  font-size: 14px;
+  line-height: 16px;
+}
+/* line 9, ../../../../scss/sass/store/category.scss */
+#b-store-content .b-category-children-list {
+  margin: 45px auto;
+  width: 720px;
+}
+/* line 12, ../../../../scss/sass/store/category.scss */
+#b-store-content .b-category-children-list a.b-subcategory {
+  display: block;
+  float: left;
+  width: 140px;
+  margin: 20px;
+  text-align: center;
+}
+/* line 18, ../../../../scss/sass/store/category.scss */
+#b-store-content .b-category-children-list a.b-subcategory .title {
+  margin: 5px;
+  text-align: center;
+}
+/* line 22, ../../../../scss/sass/store/category.scss */
+#b-store-content .b-category-children-list a.b-subcategory .image {
+  margin-top: 25px;
+}
+/* line 27, ../../../../scss/sass/store/category.scss */
+#b-store-content #b-products-top-nav {
+  margin-top: 28px;
+  font-size: 11px;
+}
+/* line 30, ../../../../scss/sass/store/category.scss */
+#b-store-content #b-products-top-nav .b-products-top-nav-info {
+  float: left;
+  padding: 7px;
+}
+/* line 34, ../../../../scss/sass/store/category.scss */
+#b-store-content #b-products-top-nav .b-products-top-nav-options {
+  float: right;
+}
+/* line 36, ../../../../scss/sass/store/category.scss */
+#b-store-content #b-products-top-nav .b-products-top-nav-options .text {
+  float: left;
+  padding: 3px;
+}
+/* line 40, ../../../../scss/sass/store/category.scss */
+#b-store-content #b-products-top-nav .b-products-top-nav-options #slider {
+  width: 100px;
+}
+/* line 44, ../../../../scss/sass/store/category.scss */
+#b-store-content #b-products-top-nav .b-products-top-nav-options .b-slider {
+  float: left;
+  margin-left: 10px;
+}
+/* line 50, ../../../../scss/sass/store/category.scss */
+#b-store-content #b-products-padding {
+  float: right;
+  margin-top: 15px;
+}
+/* line 54, ../../../../scss/sass/store/category.scss */
+#b-store-content #b-products-list {
+  margin-top: 20px;
+}
+/* line 56, ../../../../scss/sass/store/category.scss */
+#b-store-content #b-products-list a.acessory {
+  margin: 15px 35px;
+  text-align: center;
+  float: left;
+  display: block;
+  text-decoration: none;
+}
+/* line 62, ../../../../scss/sass/store/category.scss */
+#b-store-content #b-products-list a.acessory .image {
+  margin: 5px;
+}
+/* line 66, ../../../../scss/sass/store/category.scss */
+#b-store-content #b-products-list a.acessory .info div {
+  margin: 5px;
+}
+/* line 72, ../../../../scss/sass/store/category.scss */
+#b-store-content #b-products-list a.acessory .info div.sale-price {
+  color: #FF0000;
+}
+/* line 75, ../../../../scss/sass/store/category.scss */
+#b-store-content #b-products-list a.acessory .info div.old-price {
+  text-decoration: line-through;
+}

@@ -7,10 +7,12 @@ html
         meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
         title
             {% settings_value 'template_blocks' 'title' %}
-        meta(name="description", content="{% settings_value 'template_blocks' 'meta_description' %}")
-        meta(name="keywords", content="{% settings_value 'template_blocks' 'meta_keywords' %}")
+        block meta
+            meta(name="description", content="{% settings_value 'template_blocks' 'meta_description' %}")
+            meta(name="keywords", content="{% settings_value 'template_blocks' 'meta_keywords' %}")
         link(rel="stylesheet", href="{{ MEDIA_URL }}css/common.css")
         script(type="text/javascript", src="{{ STATIC_URL }}lib/jquery-1.8.0.min.js")
+        
         block header
 
         script(type="text/javascript")
@@ -33,12 +35,12 @@ html
                         li
                             a(href="/") Вход / Регистрация
                         li
-                            a(href="/") Корзина
+                            a(href="/") Корзина (2)
                 div#b-header-nav-bottom
                     ul.b-nav-container
                         {% show_menu "MainMenu" "mainmenu" %}
         section#b-section.wrapper-base
-            block middle-block   
+            block middle-block
         footer#b-footer.wrapper-base
             p.footer-text 
                 {% settings_value 'template_blocks' 'footer' %}

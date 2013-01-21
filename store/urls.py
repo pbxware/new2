@@ -7,7 +7,7 @@ from django.contrib import admin
 #from catalog.sitemaps import CategorySitemap, ProductSitemap
 
 #tmp
-#from django.views.generic.simple import direct_to_template
+from django.views.generic.simple import direct_to_template
 
 admin.autodiscover()
 
@@ -40,10 +40,9 @@ urlpatterns = patterns('',
 
     url(r'^store/', include('store.catalog.urls', namespace='store')),
 
-
-    #url(r'^$', direct_to_template, {
-    #    'template': 'index.jade'
-    #}),
+    url(r'^$', direct_to_template, {
+        'template': 'index.jade'
+    }),
     #url(r'^store/$', direct_to_template, {
     #    'template': 'store/index.jade'
     #}),

@@ -66,7 +66,7 @@ class MPTTActiveTimeModel(MPTTModel):
         return self._recurse_for_parents(self)
 
     def children_active(self):
-        return self.children.all()
+        return self.children.active()
 
     def has_active_children(self):
         return self.children_active().count() > 0
