@@ -68,12 +68,17 @@
             float: left;
             display: block;
             text-decoration: none;
+            width: 118px;
             .image {
-                margin: 5px;
+                margin: 10px;
+                min-height: 100px;
             }
             .info {
                 div {
                     margin: 5px;
+                }
+                .desc {
+                    line-height: 14px;
                 }
                 div.sale {
 

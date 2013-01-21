@@ -83,20 +83,26 @@
   float: left;
   display: block;
   text-decoration: none;
+  width: 118px;
 }
-/* line 71, ../../../../scss/sass/store/category.scss */
+/* line 72, ../../../../scss/sass/store/category.scss */
 #b-store-content #b-products-list a.acessory .image {
-  margin: 5px;
+  margin: 10px;
+  min-height: 100px;
 }
-/* line 75, ../../../../scss/sass/store/category.scss */
+/* line 77, ../../../../scss/sass/store/category.scss */
 #b-store-content #b-products-list a.acessory .info div {
   margin: 5px;
 }
-/* line 81, ../../../../scss/sass/store/category.scss */
+/* line 80, ../../../../scss/sass/store/category.scss */
+#b-store-content #b-products-list a.acessory .info .desc {
+  line-height: 14px;
+}
+/* line 86, ../../../../scss/sass/store/category.scss */
 #b-store-content #b-products-list a.acessory .info div.sale-price {
   color: #FF0000;
 }
-/* line 84, ../../../../scss/sass/store/category.scss */
+/* line 89, ../../../../scss/sass/store/category.scss */
 #b-store-content #b-products-list a.acessory .info div.old-price {
   text-decoration: line-through;
 }

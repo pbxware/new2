@@ -1,0 +1,69 @@
+extends store/layout
+{% load thumbnail %}
+{% load sekizai_tags %}
+
+
+block append header
+    link(rel="stylesheet", href="{{ MEDIA_URL }}css/store/product.css")
+    {% addtoblock "jQuery" %}
+    :text
+        $(".bar-item").click(function(){ 
+            $(this).parent().siblings().each(function(){
+                $(this).children().removeClass("active");
+            });
+            $(this).addClass("active");
+            var tabClass = $(this).attr("href");
+            $(this).parents(".tab-bar").nextAll().hide();
+            $(this).parents(".tab-bar").nextAll(tabClass).show();
+            return false;
+        });
+    {% endaddtoblock %}
+
+
+block breadcrumb
+    for p_cat in category.parents
+        |  >>
+        a(href="{{ p_cat.get_absolute_url }}") {{ p_cat.name }}
+    |  >> 
+    a(href="{{ category.get_absolute_url }}") {{ category.name }}
+    |  >> {{ product.name }}
+
+
+block store-block
+    h1.title {{ product.name }}
+
+    div#b-tabs-top
+        ul.tab-bar
+            li 
+                a.bar-item.active(href=".tab1") Основное
+            li 
+                a.bar-item(href=".tab2") Характеристики
+            li 
+                a.bar-item(href=".tab3") Документация
+            li 
+                a.bar-item(href=".tab4") База знаний
+
+        div.tab.tab1(style="display: block;")
+            {% thumbnail product.main_image.image "100x100" as im %}
+            img(src="{{ im.url }}", width="100", height="100")
+            {% empty %}
+            img(src="{{MEDIA_URL}}images/categoryimage-picture-default.jpg", width="100", height="100")
+            {% endthumbnail %}
+        div.tab.tab2 Количество Е1 портов 1
+        div.tab.tab3 
+            a(href="#") TE120 Quick start
+        div.tab.tab4
+            a(href="#") Решения -> Подключение Asterisk к потоку E1 (how-to)
+
+    div#b-tabs-bottom
+        ul.tab-bar
+            li 
+                a.bar-item.active(href=".tab1") Дополнения
+            li 
+                a.bar-item(href=".tab2") Модификации
+            li 
+                a.bar-item(href=".tab3") Аналоговые товары
+
+        div.tab.tab1(style="display: block;") tab 1
+        div.tab.tab2 tab 2
+        div.tab.tab3 tab 3

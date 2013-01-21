@@ -1,0 +1,85 @@
+/* line 1, ../../../../scss/sass/store/product.scss */
+#b-tabs-top {
+  width: 100%;
+  height: 250px;
+}
+/* line 4, ../../../../scss/sass/store/product.scss */
+#b-tabs-top a {
+  width: 180px;
+}
+
+/* line 9, ../../../../scss/sass/store/product.scss */
+#b-tabs-bottom {
+  width: 100%;
+  height: 250px;
+}
+/* line 12, ../../../../scss/sass/store/product.scss */
+#b-tabs-bottom a {
+  width: 242px;
+}
+
+/* line 17, ../../../../scss/sass/store/product.scss */
+.tab-bar {
+  height: 35px;
+}
+/* line 19, ../../../../scss/sass/store/product.scss */
+.tab-bar li {
+  float: left;
+  margin-right: 5px;
+}
+/* line 22, ../../../../scss/sass/store/product.scss */
+.tab-bar li a {
+  display: block;
+  background-color: #D4D4D4;
+  text-decoration: none;
+  height: 22px;
+  text-align: center;
+  padding-top: 8px;
+  border: 1px #000 solid;
+}
+/* line 31, ../../../../scss/sass/store/product.scss */
+.tab-bar li a.active {
+  border-bottom: none;
+  background-color: #EAEAEA;
+}
+
+/* line 38, ../../../../scss/sass/store/product.scss */
+div.tab {
+  display: none;
+  padding: 5px;
+}
+
+/* line 44, ../../../../scss/sass/store/product.scss */
+#b-store-content h1.title {
+  margin: 20px;
+  text-align: center;
+}
+/* line 48, ../../../../scss/sass/store/product.scss */
+#b-store-content .b-products-top-nav {
+  margin-top: 28px;
+  font-size: 11px;
+  overflow: hidden;
+}
+/* line 52, ../../../../scss/sass/store/product.scss */
+#b-store-content .b-products-top-nav .b-products-top-nav-info {
+  float: left;
+  padding: 3px;
+}
+/* line 56, ../../../../scss/sass/store/product.scss */
+#b-store-content .b-products-top-nav .b-products-top-nav-options {
+  float: right;
+}
+/* line 58, ../../../../scss/sass/store/product.scss */
+#b-store-content .b-products-top-nav .b-products-top-nav-options .text {
+  float: left;
+  padding: 3px;
+}
+/* line 62, ../../../../scss/sass/store/product.scss */
+#b-store-content .b-products-top-nav .b-products-top-nav-options #slider {
+  width: 100px;
+}
+/* line 66, ../../../../scss/sass/store/product.scss */
+#b-store-content .b-products-top-nav .b-products-top-nav-options .b-slider {
+  float: left;
+  margin-left: 10px;
+}
