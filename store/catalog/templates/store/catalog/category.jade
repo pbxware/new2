@@ -13,7 +13,11 @@ block breadcrumb
 
 block store-block
     div.b-category-description
-        {{ category.description|safe }}
+        {% thumbnail category.main_image.image "100x100" as im %}
+        img.image(src="{{ im.url }}", width="100", height="100")
+        {% endthumbnail %}
+        div.description
+            {{ category.description|safe }}
     div(style="clear:both;")
     div.b-category-children-list
         for subcat in category.children_active

@@ -5,6 +5,15 @@
         font-family: "Verdana";
         font-size: 14px;
         line-height: 16px;
+        img.image {
+            float: left;
+            width: 100px;
+            margin-right: 25px;
+        }
+        .description { 
+            float: left;
+            width: 610px;
+        }
     }
     .b-category-children-list {
         margin: 45px auto;
