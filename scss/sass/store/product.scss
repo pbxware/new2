@@ -4,6 +4,41 @@
     a {
         width: 180px;
     }
+    .tab1 {
+        .b-main-image {
+            float: left;
+            width: 100px;
+            margin: 35px;
+        }
+        .b-images {
+            margin-left: 20px;
+            float: left;
+            width: 65px;
+            height: 180px;
+            img {
+                margin: 3px;
+            }
+        }
+        .b-product-info {
+            float: left;
+            margin: 45px 0 0 45px;
+            width: 415px;
+            .b-product-price {
+                float: left;
+                font-size: 20px;
+                width: 200px;
+                .b-product-price-info {
+                    font-size: 10px;
+                    margin-top: 5px;
+                }
+            }
+            .b-product-cart {
+                float: right;
+                width: 160px;
+            }
+        }
+
+    }
 }
 
 #b-tabs-bottom {
@@ -37,7 +72,7 @@
 
 div.tab { 
     display: none;
-    padding: 5px;
+    padding: 20px;
 }
 
 #b-store-content {

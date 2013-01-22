@@ -4,7 +4,10 @@ extends store/layout
 
 
 block append header
+    script(type="text/javascript", src="{{ STATIC_URL }}lib/jquery.jcarousel.min.js")
+    link(type="text/css", rel="stylesheet", href="{{ STATIC_URL }}lib/tango/skin.css")
     link(rel="stylesheet", href="{{ MEDIA_URL }}css/store/product.css")
+    
     {% addtoblock "jQuery" %}
     :text
         $(".bar-item").click(function(){ 
@@ -17,6 +20,8 @@ block append header
             $(this).parents(".tab-bar").nextAll(tabClass).show();
             return false;
         });
+
+        $(".carousel").jcarousel({ vertical: false, visible: 4, scroll: 2 });
     {% endaddtoblock %}
 
 
@@ -44,17 +49,58 @@ block store-block
                 a.bar-item(href=".tab4") База знаний
 
         div.tab.tab1(style="display: block;")
-            {% thumbnail product.main_image.image "100x100" as im %}
-            img(src="{{ im.url }}", width="100", height="100")
-            {% empty %}
-            img(src="{{MEDIA_URL}}images/categoryimage-picture-default.jpg", width="100", height="100")
-            {% endthumbnail %}
-        div.tab.tab2 Количество Е1 портов 1
-        div.tab.tab3 
-            a(href="#") TE120 Quick start
-        div.tab.tab4
-            a(href="#") Решения -> Подключение Asterisk к потоку E1 (how-to)
+            div.b-main-image 
+                {% thumbnail product.main_image.image "100x100" as im %}
+                img(src="{{ im.url }}", width="100", height="100")
+                {% empty %}
+                img(src="{{MEDIA_URL}}images/categoryimage-picture-default.jpg", width="100", height="100")
+                {% endthumbnail %}
+            div.b-images
+                for image in product.images.all|slice:"1:"
+                    {% thumbnail image.image "50x50" as im %}
+                    img(src="{{ im.url }}", width="50", height="50")
+                    {% empty %}
+                    img(src="{{MEDIA_URL}}images/categoryimage-picture-default.jpg", width="50", height="50")
+                    {% endthumbnail %}
+                    br
+            div.b-product-info
+                div.b-product-price
+                    Цена: {{ product.price }} руб.
+                    div.b-product-price-info
+                        * Цена на 29.10.2012г.
+                div.b-product-cart
+                    Количество
+                    input(type="text", value="1", style="width:30px; text-align:right; margin-left:45px")
+                    br
+                    input(type="submit", value="Добавить", style="width:160px; text-align:center; margin-top:10px")
 
+        div.tab.tab2
+            table
+                for attribute in product.attributes.all
+                    tr
+                        td(style="width:250px") {{ attribute.attribute.description }}
+                        td {{ attribute.value }}
+        div.tab.tab3 
+            ul(style="list-style: disc outside none; margin-left:20px;")
+                li 
+                    a(href="") TE120 Quick start
+                li 
+                    a(href="") Hardware datasheet
+                li 
+                    a(href="") TE120 User Manual
+                li 
+                    a(href="") Quick Start
+        div.tab.tab4
+            ul(style="list-style: disc outside none; margin-left:20px;")
+                li
+                    a(href="") Решения -> Подключение Asterisk к потоку E1 (how-to)
+                li
+                    a(href="") Блог -> Обновление ревизии платы TE121B
+                li
+                    a(href="") Словарь терминов и понятий -> Протокол ISDN PRI и E1
+                li
+                    a(href="") Вопросы и Ответы -> Список вопросов по плате
+   
     div#b-tabs-bottom
         ul.tab-bar
             li 
@@ -64,6 +110,43 @@ block store-block
             li 
                 a.bar-item(href=".tab3") Аналоговые товары
 
-        div.tab.tab1(style="display: block;") tab 1
-        div.tab.tab2 tab 2
-        div.tab.tab3 tab 3
+        div.tab.tab1(style="display: block;")
+            ul.carousel.jcarousel-skin-tango
+                li
+                    img(src="{{ STATIC_URL }}images/f5fad134e729fd4a3940c3b3c25204da.jpg")
+                    br
+                    | VoIP Bridge VP4
+                    br
+                    | 15%
+                li
+                    img(src="{{ STATIC_URL }}images/f5fad134e729fd4a3940c3b3c25204da.jpg")
+                    br
+                    | VoIP Bridge VP4
+                    br
+                    | 15%
+                li
+                    img(src="{{ STATIC_URL }}images/f5fad134e729fd4a3940c3b3c25204da.jpg")
+                    br
+                    | VoIP Bridge VP4
+                    br
+                    | 15%
+                li
+                    img(src="{{ STATIC_URL }}images/f5fad134e729fd4a3940c3b3c25204da.jpg")
+                    br
+                    | VoIP Bridge VP4
+                    br
+                    | 15%
+                li
+                    img(src="{{ STATIC_URL }}images/f5fad134e729fd4a3940c3b3c25204da.jpg")
+                    br
+                    | VoIP Bridge VP4
+                    br
+                    | 15%
+                li
+                    img(src="{{ STATIC_URL }}images/f5fad134e729fd4a3940c3b3c25204da.jpg")
+                    br
+                    | VoIP Bridge VP4
+                    br
+                    | 15%
+        div.tab.tab2
+        div.tab.tab3
