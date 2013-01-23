@@ -1,7 +1,13 @@
 extends store/layout
+{% load sekizai_tags %}
 
 block append header
+    script(type="text/javascript", src="{{ STATIC_URL }}lib/jquery.jcarousel.min.js")
+    link(type="text/css", rel="stylesheet", href="{{ STATIC_URL }}lib/tango/skin.css")
     link(rel="stylesheet", href="{{ MEDIA_URL }}css/store/index.css")
+    {% addtoblock "jQuery" %}
+    $(".carousel").jcarousel({ vertical: false, visible: 4, scroll: 2 });
+    {% endaddtoblock %}
 
 block store-block
     div#b-mainpage-items 
@@ -53,3 +59,53 @@ block store-block
             И 
             a(href="#") другое
             |  оборудование для Asterisk в нашем Магазине.
+
+
+block store-bottom-block
+    table#b-store-sales
+        tr
+            td.title
+                Распродажа
+            td.links
+                a(href="#") Показать все
+                br
+                br
+                a(href="#") Почему мы распродаем оборудование?
+            td.goods
+                ul.carousel.jcarousel-skin-tango
+                    li
+                        img(src="{{ STATIC_URL }}images/f5fad134e729fd4a3940c3b3c25204da.jpg")
+                        br
+                        | VoIP Bridge VP4
+                        br
+                        | 15%
+                    li
+                        img(src="{{ STATIC_URL }}images/f5fad134e729fd4a3940c3b3c25204da.jpg")
+                        br
+                        | VoIP Bridge VP4
+                        br
+                        | 15%
+                    li
+                        img(src="{{ STATIC_URL }}images/f5fad134e729fd4a3940c3b3c25204da.jpg")
+                        br
+                        | VoIP Bridge VP4
+                        br
+                        | 15%
+                    li
+                        img(src="{{ STATIC_URL }}images/f5fad134e729fd4a3940c3b3c25204da.jpg")
+                        br
+                        | VoIP Bridge VP4
+                        br
+                        | 15%
+                    li
+                        img(src="{{ STATIC_URL }}images/f5fad134e729fd4a3940c3b3c25204da.jpg")
+                        br
+                        | VoIP Bridge VP4
+                        br
+                        | 15%
+                    li
+                        img(src="{{ STATIC_URL }}images/f5fad134e729fd4a3940c3b3c25204da.jpg")
+                        br
+                        | VoIP Bridge VP4
+                        br
+                        | 15%

@@ -1,0 +1,25 @@
+extends store/layout
+{% load sekizai_tags %}
+{% load navigator_tags %}
+
+
+block append header
+    script(type="text/javascript", src="{{ STATIC_URL }}lib/kendo/kendo.core.min.js")
+    script(type="text/javascript", src="{{ STATIC_URL }}lib/kendo/kendo.web.min.js")
+    link(rel="stylesheet", href="{{ STATIC_URL }}lib/kendo/kendo.common.min.css")
+    link(rel="stylesheet", href="{{ STATIC_URL }}lib/kendo/kendo.uniform.min.css")
+    {% addtoblock "jQuery" %}
+    $("#treeView").kendoTreeView();
+    {% endaddtoblock %}
+    link(rel="stylesheet", href="{{ MEDIA_URL }}css/store/navigator.css")
+
+
+block breadcrumb
+    |  >> Категории оборудования
+
+
+block store-block
+    ul#treeView
+        for cat in root_categories
+            {% show_navigator_item cat %}
+ 

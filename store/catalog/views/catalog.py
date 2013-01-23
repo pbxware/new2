@@ -22,7 +22,11 @@ def category(request, slug):
 
 
 def navigator(request):
-    pass
+    root_categories = Category.objects.active(parent=None)
+    return render(request, 'store/catalog/navigator.jade', {
+        #'product': product,
+        'root_categories': root_categories,
+    })
 
 
 def show_product(request, slug_pro):

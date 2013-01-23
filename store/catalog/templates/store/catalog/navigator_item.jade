@@ -1,0 +1,13 @@
+{% load navigator_tags %}
+
+if item.has_active_children
+    li(data-expanded="true")
+        span.k-sprite.folder
+        {{ item.name }}
+        ul(data-expanded="true")
+            for cat in item.children_active
+                {% show_navigator_item cat %}
+else
+    li
+        span.k-sprite.html
+        a(href="{{ item.get_absolute_url }}") {{ item.name }}

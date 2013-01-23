@@ -46,3 +46,35 @@
 #b-store #b-store-block-right .line-description {
   font-size: 11px;
 }
+/* line 46, ../../../scss/sass/store.scss */
+#b-store #b-store-sales {
+  width: 100%;
+  margin: 25px 0;
+}
+/* line 49, ../../../scss/sass/store.scss */
+#b-store #b-store-sales td {
+  vertical-align: middle;
+  padding: 5px;
+}
+/* line 53, ../../../scss/sass/store.scss */
+#b-store #b-store-sales td.title {
+  text-align: right;
+  font-weight: bold;
+  width: 170px;
+}
+/* line 58, ../../../scss/sass/store.scss */
+#b-store #b-store-sales td.links {
+  padding-left: 50px;
+  width: 100px;
+  font-size: 11px;
+}
+/* line 63, ../../../scss/sass/store.scss */
+#b-store #b-store-sales td.goods {
+  padding-left: 20px;
+}
+/* line 67, ../../../scss/sass/store.scss */
+#b-store #b-store-sales .carousel li {
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}

@@ -9,6 +9,7 @@
             float: left;
             width: 100px;
             margin: 35px;
+            position: relative;
         }
         .b-images {
             margin-left: 20px;
@@ -71,14 +72,19 @@
 }
 
 div.tab { 
-    display: none;
     padding: 20px;
+    .carousel {
+        li {
+            text-align: center;
+        }
+    }
 }
 
 #b-store-content {
     h1.title {
-        margin: 20px;
+        margin: 30px;
         text-align: center;
+        font-size: 20px;
     }
     .b-products-top-nav {
         margin-top: 28px;

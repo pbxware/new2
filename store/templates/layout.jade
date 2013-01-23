@@ -34,8 +34,11 @@ html
                             a(href="/") Связаться
                         li
                             a(href="/") Вход / Регистрация
-                        li
-                            a(href="/") Корзина (2)
+                        li(style="position:relative")
+                            a(href="/", ) Корзина 
+                                span#cart-counter(data-count="0")
+                            div#b-cart-message
+                                Товар добавлен в корзину
                 div#b-header-nav-bottom
                     ul.b-nav-container
                         {% show_menu "MainMenu" "mainmenu" %}

@@ -5,8 +5,9 @@ from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 from djantix.admin import make_active, make_not_active
 from django.forms import models, ValidationError
-from catalog.models.product import Product, ProductImage, ProductFile, ProductScreenshot, ProductAttributeValue, ProductAttribute
+from catalog.models.product import Product, Sale, ProductImage, ProductFile, ProductScreenshot, ProductAttributeValue, ProductAttribute
 from catalog.validations import validate_attribute_value
+from django import forms
 
 
 def clean_attribute_value(cleaned_data, obj):
@@ -88,3 +89,27 @@ admin.site.register(Product, ProductAdmin)
 class ProductAttributeAdmin(admin.ModelAdmin):
     search_fields = ('name', 'description')
 admin.site.register(ProductAttribute, ProductAttributeAdmin)
+
+
+class SaleFormAdmin(forms.ModelForm):
+    class Meta:
+        model = Sale
+
+    def clean(self, *args, **kwargs):
+        percentage = self.cleaned_data.get('percentage')
+        value = self.cleaned_data.get('value')
+        if not (value or percentage):
+            raise forms.ValidationError("Sale not available")
+        return self.cleaned_data
+
+
+class SaleAdmin(admin.ModelAdmin):
+    form = SaleFormAdmin
+    filter_horizontal = ('products', 'categories')
+    fieldsets = (
+        (None, {'fields': (('title', 'date_expiry',),)}),
+        (_('Sale'), {'fields': ('percentage', ('value', 'currency'),)}),
+        (_('Targets'), {'fields': ('products',)}),
+        #(_('Targets'), {'fields': ('products', 'categories',)}),
+    )
+admin.site.register(Sale, SaleAdmin)

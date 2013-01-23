@@ -75,6 +75,9 @@ class Product(ActiveTimeModel):
     def get_absolute_url(self):
         return ('store:show_product', (), {'slug_pro': self.slug})
 
+    def is_sale(self):
+        return self.sales.count() > 0
+
 
 class ProductAttribute(models.Model):
     VALIDATIONS = [
@@ -151,10 +154,10 @@ class ProductFile(ActiveTimeModel):
     product = models.ForeignKey(Product, verbose_name=_("Product"), related_name="file")
     file = models.FileField(upload_to="store/files", storage=settings.UPLOAD_FILE_STORAGE)
     caption = models.CharField(_("Caption"), max_length=255, blank=True, null=True)
-    
+
     class Meta:
         app_label = 'catalog'
-    
+
     def save(self, *args, **kwargs):
         if not self.caption:
             self.caption = self.file.name
@@ -162,3 +165,24 @@ class ProductFile(ActiveTimeModel):
 
     def __unicode__(self):
         return self.file.name
+
+
+class Sale(ActiveTimeModel):
+    title = models.CharField(_("Title"), max_length=250)
+    percentage = models.PositiveIntegerField(_('Percentage'), null=True, blank=True)
+
+    value = models.DecimalField(_("Value"), max_digits=14, decimal_places=6, blank=True, null=True)
+    currency = models.ForeignKey(Currency, blank=True, null=True)
+
+    products = models.ManyToManyField(Product, verbose_name=_("Product"), related_name="sales", blank=True)
+    categories = models.ManyToManyField(Category, verbose_name=_("Category"), related_name="sales", blank=True)
+
+    date_expiry = models.DateField(_("Date expiry"))
+
+    class Meta:
+        app_label = 'catalog'
+        verbose_name = _("Sale")
+        verbose_name_plural = _("Sales")
+
+    def __unicode__(self):
+        return self.title

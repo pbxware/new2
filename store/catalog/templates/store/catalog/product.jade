@@ -1,6 +1,7 @@
 extends store/layout
 {% load thumbnail %}
 {% load sekizai_tags %}
+{% load humanize %}
 
 
 block append header
@@ -21,7 +22,31 @@ block append header
             return false;
         });
 
-        $(".carousel").jcarousel({ vertical: false, visible: 4, scroll: 2 });
+        $(".carousel").each(function(){
+            $(this).jcarousel({ vertical: false, visible: 4, scroll: 2 });
+        });
+
+        $(".tab").hide();
+        $(".tab1").show();
+
+        $("#button-add-to-cart").click(function(){
+            var count = $("#cart-counter").data("count");
+            var value = parseInt($("#product-value").val()) + count;
+            if(value > 0) {
+                $("#cart-counter").text("(" + value + ")");
+            } else {
+                $("#cart-counter").text("");
+            }
+            $("#cart-counter").data("count", value);
+
+            $("#b-cart-message").fadeIn();
+            setTimeout(function() {
+                $("#b-cart-message").fadeOut();
+            }, 2000);
+
+            return false;
+        });
+
     {% endaddtoblock %}
 
 
@@ -55,6 +80,8 @@ block store-block
                 {% empty %}
                 img(src="{{MEDIA_URL}}images/categoryimage-picture-default.jpg", width="100", height="100")
                 {% endthumbnail %}
+                if product.is_sale
+                    img(src="{{ STATIC_URL }}images/sale.jpg", width="100", style="position:absolute; top:80px; left:60px")
             div.b-images
                 for image in product.images.all|slice:"1:"
                     {% thumbnail image.image "50x50" as im %}
@@ -65,14 +92,22 @@ block store-block
                     br
             div.b-product-info
                 div.b-product-price
-                    Цена: {{ product.price }} руб.
+                    if product.is_sale
+                        span(style="text-decoration: line-through;") Цена: {{ product.price|intcomma }} руб.
+                    else
+                        Цена: {{ product.price|intcomma }} руб.
                     div.b-product-price-info
                         * Цена на 29.10.2012г.
                 div.b-product-cart
                     Количество
-                    input(type="text", value="1", style="width:30px; text-align:right; margin-left:45px")
+                    input#product-value(type="text", value="1", style="width:30px; text-align:right; margin-left:45px")
                     br
-                    input(type="submit", value="Добавить", style="width:160px; text-align:center; margin-top:10px")
+                    input#button-add-to-cart(type="submit", value="Добавить", style="width:160px; text-align:center; margin-top:10px")
+
+            if product.is_sale
+                div(style="color: red; font-size:20px; margin-left:20px;float:left;margin-left: 42px;margin-top: 15px;")
+                    Новая цена: 20 208 руб.
+
 
         div.tab.tab2
             table
@@ -110,43 +145,64 @@ block store-block
             li 
                 a.bar-item(href=".tab3") Аналоговые товары
 
-        div.tab.tab1(style="display: block;")
+        div.tab.tab1
             ul.carousel.jcarousel-skin-tango
                 li
+                    p(style="margin-bottom: 5px") 
+                        a(href="#") VPMADT032
+                    p(style="margin-bottom: 5px") Модуль эхоподавления
                     img(src="{{ STATIC_URL }}images/f5fad134e729fd4a3940c3b3c25204da.jpg")
-                    br
-                    | VoIP Bridge VP4
-                    br
-                    | 15%
                 li
+                    p(style="margin-bottom: 5px") 
+                        a(href="#") VPMADT032
+                    p(style="margin-bottom: 5px") Модуль эхоподавления
                     img(src="{{ STATIC_URL }}images/f5fad134e729fd4a3940c3b3c25204da.jpg")
-                    br
-                    | VoIP Bridge VP4
-                    br
-                    | 15%
                 li
+                    p(style="margin-bottom: 5px") 
+                        a(href="#") VPMADT032
+                    p(style="margin-bottom: 5px") Модуль эхоподавления
                     img(src="{{ STATIC_URL }}images/f5fad134e729fd4a3940c3b3c25204da.jpg")
-                    br
-                    | VoIP Bridge VP4
-                    br
-                    | 15%
                 li
+                    p(style="margin-bottom: 5px") 
+                        a(href="#") VPMADT032
+                    p(style="margin-bottom: 5px") Модуль эхоподавления
                     img(src="{{ STATIC_URL }}images/f5fad134e729fd4a3940c3b3c25204da.jpg")
-                    br
-                    | VoIP Bridge VP4
-                    br
-                    | 15%
                 li
+                    p(style="margin-bottom: 5px") 
+                        a(href="#") VPMADT032
+                    p(style="margin-bottom: 5px") Модуль эхоподавления
                     img(src="{{ STATIC_URL }}images/f5fad134e729fd4a3940c3b3c25204da.jpg")
-                    br
-                    | VoIP Bridge VP4
-                    br
-                    | 15%
                 li
+                    p(style="margin-bottom: 5px") 
+                        a(href="#") VPMADT032
+                    p(style="margin-bottom: 5px") Модуль эхоподавления
                     img(src="{{ STATIC_URL }}images/f5fad134e729fd4a3940c3b3c25204da.jpg")
-                    br
-                    | VoIP Bridge VP4
-                    br
-                    | 15%
         div.tab.tab2
+            ul.carousel.jcarousel-skin-tango
+                li
+                    p(style="margin-bottom: 5px") 
+                        a(href="#") VPMADT032
+                    p(style="margin-bottom: 5px") Модуль эхоподавления
+                    img(src="{{ STATIC_URL }}images/f5fad134e729fd4a3940c3b3c25204da.jpg")
+                li
+                    p(style="margin-bottom: 5px") 
+                        a(href="#") VPMADT032
+                    p(style="margin-bottom: 5px") Модуль эхоподавления
+                    img(src="{{ STATIC_URL }}images/f5fad134e729fd4a3940c3b3c25204da.jpg")
         div.tab.tab3
+            ul.carousel.jcarousel-skin-tango
+                li
+                    p(style="margin-bottom: 5px") 
+                        a(href="#") VPMADT032
+                    p(style="margin-bottom: 5px") Модуль эхоподавления
+                    img(src="{{ STATIC_URL }}images/f5fad134e729fd4a3940c3b3c25204da.jpg")
+                li
+                    p(style="margin-bottom: 5px") 
+                        a(href="#") VPMADT032
+                    p(style="margin-bottom: 5px") Модуль эхоподавления
+                    img(src="{{ STATIC_URL }}images/f5fad134e729fd4a3940c3b3c25204da.jpg")
+                li
+                    p(style="margin-bottom: 5px") 
+                        a(href="#") VPMADT032
+                    p(style="margin-bottom: 5px") Модуль эхоподавления
+                    img(src="{{ STATIC_URL }}images/f5fad134e729fd4a3940c3b3c25204da.jpg")

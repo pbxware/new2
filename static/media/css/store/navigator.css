@@ -1,0 +1,25 @@
+/* line 2, ../../../../scss/sass/store/navigator.scss */
+#treeView .k-sprite {
+  background-image: url("../../images/coloricons-sprite.png");
+  background-repeat: no-repeat;
+}
+/* line 6, ../../../../scss/sass/store/navigator.scss */
+#treeView .rootfolder {
+  background-position: 0 0;
+}
+/* line 7, ../../../../scss/sass/store/navigator.scss */
+#treeView .folder {
+  background-position: 0 -16px;
+}
+/* line 8, ../../../../scss/sass/store/navigator.scss */
+#treeView .pdf {
+  background-position: 0 -32px;
+}
+/* line 9, ../../../../scss/sass/store/navigator.scss */
+#treeView .html {
+  background-position: 0 -48px;
+}
+/* line 10, ../../../../scss/sass/store/navigator.scss */
+#treeView .image {
+  background-position: 0 -64px;
+}
