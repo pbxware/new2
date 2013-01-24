@@ -11,7 +11,7 @@ import jade_settings
 #from inplaceedit_settings import *
 
 # Store
-#from delivery_settings import *
+from delivery_settings import *
 from store_settings import *
 
 #Admin
