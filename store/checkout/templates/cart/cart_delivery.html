@@ -1,0 +1,64 @@
+{% load humanize %}
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#city-delivery-choice").click(function(){
+            $(this).hide();
+            $("#city-name-delivery").show();
+            return false;
+        });
+        $("#city-name-delivery-ok").click(function(){
+            $("#delivery-city-choice-form").submit();
+            return false;
+        });
+        $("#delivery-city-choice-form").submit(function(){
+            show_delivery({
+                container: $("#delivery-container"),
+                summary: $("#b-cart-summary-value"),
+                loader: $("#b-delivery-line-loader"),
+                city_id: $("#city-id-delivery").val(),
+                city_name: $("#city-name-delivery").val(),
+                url: '{% url checkout:cart_delivery %}'
+            });
+            return false;
+        });
+        $(".ui-button").button();
+        $("#city-link-delivery").click(function(){
+            $("#b-location-dialog").dialog("open");
+            $("#b-location-name").autocomplete("search");
+            return false;  
+        });
+    });   
+</script>
+
+<table id="b-delivery">
+    <tr>
+        <td class="b-image-line">
+            <img src="{{ MEDIA_URL }}images/delivery.png">
+        </td>
+        <td>
+            <div class="title">Доставка</div>
+            <div class="b-city-title">Ваш город:</div> 
+            <div class="b-city-link-delivery">
+                <a id="city-link-delivery" href="#"><strong>{{ location_name }}</strong></a>
+            </div>
+        </td>
+        <td>
+            {% if delivery %}
+                Срок доставки: {{ delivery.deliveryPeriodMin }} - {{ delivery.deliveryPeriodMax }} дн.
+            {% else %}
+                {% if city.name %}
+                    Свяжитесь с менеджером
+                {% endif %}
+            {% endif %}
+        </td>
+        <td class="total-price">
+            {% if delivery %}
+                <div class="price"> 
+                    <span class="value">{{ delivery.price|intcomma }}</span>
+                    <span class="currency">руб.</span>
+                </div>
+            {% endif %}
+        </td>
+    </tr>
+</table>

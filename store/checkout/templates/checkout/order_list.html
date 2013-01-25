@@ -1,0 +1,76 @@
+{% extends 'base-account.html' %}
+{% load sekizai_tags %}
+
+{% block header %}
+    {{ block.super }}
+    {% addtoblock "css" %}
+        <link type="text/css" rel="stylesheet" href="{{ MEDIA_URL }}css/registration.css">
+    {% endaddtoblock %}
+    {% addtoblock "js" %}
+        <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.validate.min.js"></script> 
+        <script type="text/javascript" src="{{ MEDIA_URL }}js/messages_ru.js"></script> 
+        <script type="text/javascript" src="{{ MEDIA_URL }}js/account.js"></script>
+    {% endaddtoblock %}
+    {% addtoblock "jQuery" %}
+        
+    {% endaddtoblock %}
+{% endblock %}
+
+
+{% block content-right %}
+    <div id="b-content-store-left" style="width:812px;">
+        <div id="b-account">
+            <div class="b-background-line">
+                {% if orders %}
+                    <h2 class="title">Ваши заказы</h2>
+                    <div class="b-background-line-child"> 
+                        <table class="b-checkout-table">
+                            <tr class="header-line">
+                                <td>№</td>
+                                <td>Продукты</td>
+                                <td style="width: 60px;">Статус</td>
+                                <td style="width: 80px;">Обновлен</td>
+                                <td style="width: 82px;"></td>
+                            </tr> 
+                            {% for order in orders %}
+                                <tr class="item-line {% cycle '' 'gray-line' %}">
+                                    <td class="b-num-td">
+                                        {{ order.id }}
+                                    </td>
+                                    <td>
+                                        <table style="width:100%">
+                                            {% for item in order.get_items %}
+                                                <tr>
+                                                    <td>
+                                                        <strong>{{ item.product.full_name }}</strong>
+                                                    </td>
+                                                    <td style="width: 20px;">{{ item.quantity }}</td>
+                                                </tr>
+                                            {% endfor %}
+                                        </table>
+                                    </td>
+                                    <td>
+                                        {{ order.get_status_display }}
+                                    </td>
+                                    <td>
+                                        {{ order.date_added|date:"d M Y H:i" }}
+                                    </td>
+                                    <td>
+                                        <a class="ui-button" style="font-size: 10px;" href="{% url checkout:show_order order.id %}">  
+                                            Подробнее
+                                        </a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            <tr class="bottom-line">
+                                <td colspan="5"></td>
+                            </tr>
+                        </table>    
+                    </div>
+                {% else %}
+                    <a href="{% url shop:index %}" class="ui-button">В магазин</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,102 @@
+{% load settings_tags %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">       
+        <title>ff</title>
+        <style type="text/css">
+            @page {
+                margin: 1cm;
+                margin-bottom: 1cm;
+                @frame footer {
+                    -pdf-frame-content: footerContent;
+                    bottom: 1cm;
+                    margin-left: 1cm;
+                    margin-right: 1cm;
+                    height: 1cm;
+                }
+            }
+            @font-face {
+                font-family: Arial, "Arial Font";
+                src: url('{{ STATIC_URL }}report/arial.ttf');
+            }
+            @font-face {
+                font-family: Arial, "Arial Font";
+                src: url('{{ STATIC_URL }}report/arial_bold.ttf');
+                font-weight: bold;
+            }
+            body {
+                font-family: Arial;
+                font-size: 12px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            h1 {
+                font-size: 22px;
+                font-weight: bold;
+                margin: 0;
+            }
+            td {
+                padding: 0;
+                margin: 0;
+            }
+            #header-title {
+                width: 250px;
+                font-size: 32px;
+                font-weight: bold;
+                padding-top: 5px;
+                padding-left: 10px;
+            }
+            #header-logo {
+                text-align: right;
+                padding-right: 5px;
+            }
+            #b-content {
+                padding-top: 30px;
+                padding-left: 10px;
+            }
+            #footerContent p {
+                text-align: center;
+            }
+        </style>
+        {% block css_ext %}{% endblock %}
+    </head>
+    <body>
+        <div>
+            <table>
+                <tr>
+                    <td id="header-title">{% settings_value 'store_groups' 'title' %}</td>
+                    <td id="header-logo">
+                        <img src="{{ STATIC_URL }}report/logo.png" width="200">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {% settings_value 'store_groups' 'address' %}
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><hr></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div id="b-content">
+            {% block content %}{% endblock %}
+        </div>
+        <div id="footerContent">
+            <hr>
+            <p>
+                www.pbxware.ru
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,120 @@
+{% extends "reports/base-report.html" %}
+{% load humanize %}
+
+{% block css_ext %}
+    <style type="text/css">
+        #b-title {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        #b-contact-info {
+            
+        }
+        #b-contact-info td {
+            margin: 0;
+            padding: 0;
+        }   
+        #b-contact-info .b-contact-label {
+            width: 125px;
+        }   
+        #b-items td {
+            padding-top: 4px;
+            padding-left: 2px;
+            padding-right: 2px;
+            text-align: center;
+            /*border-left: 1px solid #000;*/
+        }
+        #b-items .header{
+            border-bottom: 1px solid #000;
+            font-weight: bold;
+            text-align: center;
+        }
+        #b-items .item-tr {
+            border-bottom: 1px solid #ccc;
+        }
+        #b-items .b-last-item{
+            text-align: right;
+            font-weight: bold;
+            border-top: 1px solid #000;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <h1 id="b-title">Заказ # {{ order.id }}</h1>
+    <table id="b-contact-info">
+        <tr>
+            <td style="padding-left:35px;">
+                <table>
+                    <tr>
+                        <td class="b-contact-label">Дата предложения</td>
+                        <td>{{ order.date_updated|date:"d.m.Y" }}</td>
+                    </tr>
+                    <tr>
+                        <td>Менеджер продаж</td>
+                        <td>
+                            {{ order.manager.get_full_name|default:'Не назначен' }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Адрес эл. почты</td>
+                        <td>{{ order.manager.email }}</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="padding-right:35px;">
+                <table>
+                    <tr>
+                        <td class="b-contact-label">Имя организации</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Имя контакта</td>
+                        <td>
+                            {{ order.owner.get_full_name|default:'' }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Электронная почта</td>
+                        <td>{{ order.owner.email }}</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div style="margin-top: 25px;">
+        <table>
+            <tr>
+                <td style="padding-left: 10px; padding-right: 10px;">
+                    <table id="b-items">
+                        <tr>
+                            <td style="text-align: left;" class="header">Описание</td>
+                            <td class="header">Количество</td>
+                            <td class="header">Цена</td>
+                            <td class="header">Скидка(%)</td>
+                            <td class="header" style="text-align: right;">Сумма</td>
+                        </tr>
+                        {% for item in order.items.all %}
+                            <tr {% if not forloop.last %}class="item-tr"{% endif %}>
+                                <td style="text-align: left; width:350px">{{ item.product.full_name }}</td>
+                                <td style="text-align: center; width:70px">{{ item.quantity }}</td>
+                                <td>{{ item.unit_price|intcomma }} руб.</td>
+                                <td style="width:70px">
+                                    {% if item.discount %}
+                                        {{ item.discount }} %
+                                    {% endif %}
+                                </td>
+                                <td style="text-align: right;">{{ item.total_price|intcomma }} руб.</td>
+                            </tr>
+                        {% endfor %}
+                        <tr>
+                            <td colspan="2"></td>
+                            <td colspan="2" class="b-last-item"><b>Общая сумма :</b></td>
+                            <td class="b-last-item">{{ order.total_price|intcomma }} руб.</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}

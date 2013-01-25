@@ -1,0 +1,214 @@
+{% load catalog_tags humanize %}<?xml version="1.0"?>
+<document filename="Invoice.pdf">
+    <docinit>
+        <registerFont fontName="Helvetica" fontFile="store/checkout/reports/fonts/Helvetica.ttf"/>
+        <registerFont fontName="Arial" fontFile="store/checkout/reports/fonts/arial.ttf"/>
+        <registerFont fontName="Arial-Bold" fontFile="store/checkout/reports/fonts/arial.ttf"/>
+    </docinit>
+    <template title="" author="OpenERP S.A.(sales@openerp.com)" allowSplitting="20">
+        <pageTemplate id="first">
+           <frame id="first" x1="72" y1="72" width="451" height="698"/>
+        </pageTemplate>
+    </template>
+    
+    <stylesheet>
+        <blockTableStyle id="Standard_Outline">
+            <blockAlignment value="LEFT"/>
+            <blockValign value="TOP"/>
+        </blockTableStyle>
+        <blockTableStyle id="Table1">
+            <blockAlignment value="LEFT"/>
+            <blockValign value="TOP"/>
+        </blockTableStyle>
+        <blockTableStyle id="Table2">
+            <blockAlignment value="LEFT"/>
+            <blockValign value="TOP"/>
+            <lineStyle kind="LINEBEFORE" colorName="#e6e6e6" start="0,0" stop="0,-1"/>
+            <lineStyle kind="LINEABOVE" colorName="#e6e6e6" start="0,0" stop="0,0"/>
+            <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="0,-1" stop="0,-1"/>
+            <lineStyle kind="LINEBEFORE" colorName="#e6e6e6" start="1,0" stop="1,-1"/>
+            <lineStyle kind="LINEABOVE" colorName="#e6e6e6" start="1,0" stop="1,0"/>
+            <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="1,-1" stop="1,-1"/>
+            <lineStyle kind="LINEBEFORE" colorName="#e6e6e6" start="2,0" stop="2,-1"/>
+            <lineStyle kind="LINEABOVE" colorName="#e6e6e6" start="2,0" stop="2,0"/>
+            <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="2,-1" stop="2,-1"/>
+            <lineStyle kind="LINEBEFORE" colorName="#e6e6e6" start="3,0" stop="3,-1"/>
+            <lineStyle kind="LINEAFTER" colorName="#e6e6e6" start="3,0" stop="3,-1"/>
+            <lineStyle kind="LINEABOVE" colorName="#e6e6e6" start="3,0" stop="3,0"/>
+            <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="3,-1" stop="3,-1"/>
+        </blockTableStyle>
+        <blockTableStyle id="Table3">
+            <blockAlignment value="LEFT"/>
+            <blockValign value="TOP"/>
+            <lineStyle kind="LINEBEFORE" colorName="#e6e6e6" start="0,0" stop="0,-1"/>
+            <lineStyle kind="LINEABOVE" colorName="#e6e6e6" start="0,0" stop="0,0"/>
+            <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="0,-1" stop="0,-1"/>
+            <lineStyle kind="LINEBEFORE" colorName="#e6e6e6" start="1,0" stop="1,-1"/>
+            <lineStyle kind="LINEABOVE" colorName="#e6e6e6" start="1,0" stop="1,0"/>
+            <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="1,-1" stop="1,-1"/>
+            <lineStyle kind="LINEBEFORE" colorName="#e6e6e6" start="2,0" stop="2,-1"/>
+            <lineStyle kind="LINEABOVE" colorName="#e6e6e6" start="2,0" stop="2,0"/>
+            <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="2,-1" stop="2,-1"/>
+            <lineStyle kind="LINEBEFORE" colorName="#e6e6e6" start="3,0" stop="3,-1"/>
+            <lineStyle kind="LINEAFTER" colorName="#e6e6e6" start="3,0" stop="3,-1"/>
+            <lineStyle kind="LINEABOVE" colorName="#e6e6e6" start="3,0" stop="3,0"/>
+            <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="3,-1" stop="3,-1"/>
+        </blockTableStyle>
+        <blockTableStyle id="Table4">
+            <blockAlignment value="LEFT"/>
+            <blockValign value="TOP"/>
+            <lineStyle kind="LINEBELOW" colorName="#000000" start="0,-1" stop="0,-1"/>
+            <lineStyle kind="LINEBELOW" colorName="#000000" start="1,-1" stop="1,-1"/>
+            <lineStyle kind="LINEBELOW" colorName="#000000" start="2,-1" stop="2,-1"/>
+            <lineStyle kind="LINEBELOW" colorName="#000000" start="3,-1" stop="3,-1"/>
+            <lineStyle kind="LINEBELOW" colorName="#000000" start="4,-1" stop="4,-1"/>
+            <lineStyle kind="LINEBELOW" colorName="#000000" start="5,-1" stop="5,-1"/>
+        </blockTableStyle>
+        <blockTableStyle id="Table5">
+            <blockAlignment value="LEFT"/>
+            <blockValign value="TOP"/>
+            <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="0,-1" stop="0,-1"/>
+            <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="1,-1" stop="1,-1"/>
+            <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="2,-1" stop="2,-1"/>
+            <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="3,-1" stop="3,-1"/>
+            <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="4,-1" stop="4,-1"/>
+            <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="5,-1" stop="5,-1"/>
+            <lineStyle kind="LINEBELOW" colorName="#e6e6e6" start="6,-1" stop="6,-1"/>
+        </blockTableStyle>
+        <blockTableStyle id="Table6">
+            <blockAlignment value="LEFT"/>
+            <blockValign value="TOP"/>
+            <lineStyle kind="LINEABOVE" colorName="#ffffff" start="0,0" stop="0,0"/>
+            <lineStyle kind="LINEABOVE" colorName="#000000" start="1,0" stop="1,0"/>
+            <lineStyle kind="LINEABOVE" colorName="#000000" start="2,0" stop="2,0"/>
+            <lineStyle kind="LINEBEFORE" colorName="#ffffff" start="0,1" stop="0,-1"/>
+            <lineStyle kind="LINEBELOW" colorName="#ffffff" start="0,-1" stop="0,-1"/>
+            <lineStyle kind="LINEBEFORE" colorName="#ffffff" start="0,2" stop="0,-1"/>
+            <lineStyle kind="LINEBELOW" colorName="#ffffff" start="0,-1" stop="0,-1"/>
+            <lineStyle kind="LINEABOVE" colorName="#000000" start="1,2" stop="1,2"/>
+            <lineStyle kind="LINEABOVE" colorName="#000000" start="2,2" stop="2,2"/>
+        </blockTableStyle>
+        <blockTableStyle id="Table7">
+            <blockAlignment value="LEFT"/>
+            <blockValign value="TOP"/>
+        </blockTableStyle>
+        <initialize>
+            <paraStyle name="all" alignment="justify"/>
+        </initialize>
+
+        <paraStyle name="terp_default_8" fontName="Helvetica" fontSize="8.0" leading="10" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+        <paraStyle name="terp_tblheader_Details" fontName="Helvetica-Bold" fontSize="9.0" leading="11" alignment="LEFT" spaceBefore="6.0" spaceAfter="6.0"/>
+        <paraStyle name="terp_tblheader_Details_Centre" fontName="Helvetica-Bold" fontSize="9.0" leading="11" alignment="CENTER" spaceBefore="6.0" spaceAfter="6.0"/>
+        <paraStyle name="terp_tblheader_Details_Right" fontName="Helvetica-Bold" fontSize="9.0" leading="11" alignment="RIGHT" spaceBefore="6.0" spaceAfter="6.0"/>
+        <paraStyle name="terp_default_9" fontName="Helvetica" fontSize="9.0" leading="11" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+        <paraStyle name="terp_default_Centre_9" fontName="Helvetica" fontSize="9.0" leading="11" alignment="CENTER" spaceBefore="0.0" spaceAfter="0.0"/>
+        <paraStyle name="terp_default_Right_9" fontName="Helvetica" fontSize="9.0" leading="11" alignment="RIGHT" spaceBefore="0.0" spaceAfter="0.0"/>
+    </stylesheet>
+
+    <story>
+        <para style="terp_header">Счет # {{ order.id }}</para>
+        <blockTable colWidths="260.0,260.0" style="Table1">
+            <tr>
+                <td>
+                    <blockTable colWidths="95.0,160.0" style="Table1">
+                        <tr>
+                            <td>
+                                <para style="terp_default_8">Дата предложения</para>
+                            </td>
+                            <td>
+                                <para style="terp_default_8">{{ order.date_added }}</para>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <para style="terp_default_8">Менеджер продаж</para>
+                            </td>
+                            <td>
+                                <para style="terp_default_8">{{ order.manager.get_full_name|default:'' }}</para>
+                            </td>
+                        </tr>  
+                        <tr>
+                            <td>
+                                <para style="terp_default_8">Адрес эл. почты</para>
+                            </td>
+                            <td>
+                                <para style="terp_default_8">{{ order.manager.email|default:'' }}</para>
+                            </td>
+                        </tr>   
+                    </blockTable>
+                </td>
+                <td>
+                    <blockTable colWidths="95.0,160.0" style="Table1">
+                        {% if not contact.contact_type == 1 %}
+                            <tr>
+                                <td>
+                                    <para style="terp_default_8">Имя организации</para>
+                                </td>
+                                <td>
+                                    <para style="terp_default_8">{{ contact.get_partner.name }}</para>
+                                </td>
+                            </tr> 
+                        {% endif %}
+                        <tr>
+                            <td>
+                                <para style="terp_default_8">Имя контакта</para>
+                            </td>
+                            <td>
+                                <para style="terp_default_8">{{ contact|default:'' }}</para>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <para style="terp_default_8">Электронная почта</para>
+                            </td>
+                            <td>
+                                <para style="terp_default_8">{{ order.owner.email|default:'' }}</para>
+                            </td>
+                        </tr>
+                    </blockTable>
+                </td>
+            </tr>
+        </blockTable>
+        <para style="terp_default_8">
+            <font color="white"> </font>
+        </para>
+        <blockTable colWidths="251,80.0,70.0,50.0,85.0" repeatRows="1" style="Table4">
+            <tr>
+                <td>
+                    <para style="terp_tblheader_Details">Описание</para>
+                </td>
+                <td>
+                    <para style="terp_tblheader_Details_Right">Количество</para>
+                </td>
+                <td>
+                    <para style="terp_tblheader_Details_Right">Цена за ед.</para>
+                </td>
+                <td>
+                    <para style="terp_tblheader_Details_Centre">Скидка (%)</para>
+                </td>
+                <td>
+                    <para style="terp_tblheader_Details_Right">Сумма</para>
+                </td>
+            </tr>
+            {% for product in order.products.all %}
+                <tr>
+                    <td>
+                        <para style="terp_default_9">{{ product.fullname }}</para>
+                    </td>
+                    <td>
+                        <para style="terp_default_Right_9"></para>
+                    </td>
+                    <td>
+                        <para style="terp_default_Right_9">{{ product|convert_price:CURRENCY|intcomma }}</para>
+                    </td>
+                    <td>
+                        <para style="terp_default_Centre_9"></para>
+                    </td>
+                    <td>
+                        <para style="terp_default_Right_9"></para>
+                    </td>
+                </tr>
+            {% endfor %}
+        </blockTable>
+    </story>
+</document>
