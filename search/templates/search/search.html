@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% load cache %}
+{% load catalog_tags %}
+{% load sekizai_tags %}
+{% load store_tags %}
+
+
+{% block title %}{{ block.super }} - Результаты поиска{% endblock %}
+
+{% block header %}
+    {{ block.super }}
+    {% addtoblock "css" %}
+        <link type="text/css" rel="stylesheet" href="{{ MEDIA_URL }}css/store.css">
+        <link type="text/css" rel="stylesheet" href="{{ MEDIA_URL }}css/pagination/style.css">
+    {% endaddtoblock %}
+    {% addtoblock "js" %}
+        <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.paginate.js"></script>
+        <script type="text/javascript" src="{{ MEDIA_URL }}js/shop.js"></script>
+    {% endaddtoblock %}
+    {% addtoblock "jQuery" %}
+        {% if products.has_other_pages %}
+            var container_pro = $("#b-search-result-products").parent();
+            var overlay_pro = container_pro.children(".b-store-category-overlay");
+            var query_url_pro = '{% url search:search_products %}?{{ query_url|safe }}';
+
+            $("#pagination-products").paginate({
+                count       : {{ products.paginator.num_pages }},
+                start       : 1,
+                display     : 12,
+                image       : true,
+                border      : true,
+                border_color     : '#F3F3F3',
+                background_color : '#F3F3F3',
+                text_color       : '#3B3737',
+                
+                background_hover_color  : '#F3F3F3', 
+                border_hover_color      : '#F3F3F3',
+                text_hover_color        : '#008AFF',
+
+                onChange    : function(page){
+                    overlay_pro.width(container_pro.innerWidth()).height(container_pro.innerHeight());
+                    overlay_pro.show();
+                    $.get(query_url_pro+'&page='+page, function(data){
+                        $("#b-search-result-products").html(data);
+                        overlay_pro.hide();
+                    });
+                }
+            });
+        {% endif %}
+        {% if pages.has_other_pages %}
+            var container_page = $("#b-search-result-pages").parent();
+            var overlay_page = container_page.children(".b-store-category-overlay");
+            var query_url_page = '{% url search:search_pages %}?{{ query_url|safe }}';
+
+            $("#pagination-pages").paginate({
+                count       : {{ pages.paginator.num_pages }},
+                start       : 1,
+                display     : 12,
+                image       : true,
+                border      : true,
+                border_color     : '#F3F3F3',
+                background_color : '#F3F3F3',
+                text_color       : '#3B3737',
+                
+                background_hover_color  : '#F3F3F3', 
+                border_hover_color      : '#F3F3F3',
+                text_hover_color        : '#008AFF',
+
+                onChange    : function(page){
+                    overlay_page.width(container_page.innerWidth()).height(container_page.innerHeight());
+                    overlay_page.show();
+                    $.get(query_url_page+'&page='+page, function(data){
+                        $("#b-search-result-pages").html(data);
+                        overlay_page.hide();
+                    });
+                }
+            });
+        {% endif %}
+    {% endaddtoblock %}    
+{% endblock %}
+
+{% block main-box %}
+    <div id="b-content-store-left" class="b-product-list">  
+        {% if products or pages %}
+            <h1 class="title-search">Результаты поиска:</h1>
+            {% if products %}
+                <div class="b-store-category">
+                    <div class="b-store-category-overlay"></div>
+                    <h2 class="title">{% if category %}{{ category.name }}{% else %}Продукты{% endif %}</h2>
+                    <div id="b-search-result-products">
+                        {% for product in products %}
+                            {% show_acessory product %}
+                        {% endfor %}
+                    </div>
+                    <div style="clear:both;"></div>
+                    {% if products.has_other_pages %}
+                        <div class="b-pagination">
+                            <div id="pagination-products"></div>
+                        </div>
+                    {% endif %}
+                </div>
+                <br>
+            {% endif %}
+
+            {% if pages %}
+                <div class="b-store-category">
+                    <div class="b-store-category-overlay"></div>
+                    <h2 class="title">Статьи</h2>
+                    <div id="b-search-result-pages">
+                        {% for page in pages %}
+                            <a href="{{ page.url }}" class="b-acessory-page">
+                                <h3 class="title">{{ page.title }}</h3>
+                                <div class="description">
+                                    {{ page.text|noramlize }}
+                                </div>
+                            </a>
+                        {% endfor %}
+                    </div>
+                    <div style="clear:both;"></div>
+                    {% if pages.has_other_pages %}
+                        <div class="b-pagination">
+                            <div id="pagination-pages"></div>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endif %}
+
+        {% else %}
+            По Вашему запросу продуктов не найдено
+        {% endif %}
+    </div>
+    <div id="b-content-small-right" style="margin-top:10px;">
+        {% include 'include/banner-right-two.html' %}
+    </div>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% load store_tags %}
+{% for page in pages %}
+    <a href="{{ page.url }}" class="b-acessory-page">
+        <h3 class="title">{{ page.title }}</h3>
+        <div class="description">
+            {{ page.text|noramlize }}
+        </div>
+    </a>
+{% endfor %}
