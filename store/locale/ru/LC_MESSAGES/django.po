@@ -1,0 +1,861 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-12-24 19:33+0400\n"
+"PO-Revision-Date: 2012-12-24 19:35\n"
+"Last-Translator:   <saxar@switchvox.ru>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"X-Translated-Using: django-rosetta 0.6.8\n"
+
+#: dashboard.py:28 settings/menu.py:20
+msgid "Administration"
+msgstr "Администрирование"
+
+#: dashboard.py:36
+msgid "CRM"
+msgstr ""
+
+#: dashboard.py:43
+msgid "Store"
+msgstr "Магазин"
+
+#: dashboard.py:47
+msgid "Catalog"
+msgstr "Каталог"
+
+#: dashboard.py:53
+msgid "Checkout"
+msgstr ""
+
+#: dashboard.py:58 account/models.py:104 delivery/CDEK/models.py:75
+msgid "Delivery"
+msgstr "Доставка"
+
+#: dashboard.py:62
+msgid "Commons"
+msgstr "Общие"
+
+#: dashboard.py:72
+msgid "CMS"
+msgstr ""
+
+#: dashboard.py:84 settings/menu.py:16
+msgid "Applications"
+msgstr "Приложения"
+
+#: dashboard.py:92
+#, fuzzy
+msgid "Order Board"
+msgstr "Заказ создан"
+
+#: dashboard.py:95
+msgid "New Orders"
+msgstr "Новые заказы"
+
+#: dashboard.py:96
+msgid "Open Orders"
+msgstr "Открытые заказы"
+
+#: account/admin.py:74
+msgid "Passport"
+msgstr "Паспорт"
+
+#: account/models.py:19 account/forms/account_form.py:22
+msgid "Middle name"
+msgstr "Отчество"
+
+#: account/models.py:20
+msgid "Avatar"
+msgstr ""
+
+#: account/models.py:32
+msgid "Individual"
+msgstr "Физическое лицо"
+
+#: account/models.py:33
+msgid "Legal person"
+msgstr "Юридическое лицо"
+
+#: account/models.py:34
+msgid "Individual entrepreneur"
+msgstr "Индивидуальный предприниматель"
+
+#: account/models.py:36
+msgid "User type"
+msgstr "Тип пользователя"
+
+#: account/models.py:40
+msgid "Series"
+msgstr "Серия"
+
+#: account/models.py:41
+msgid "Number"
+msgstr "Номер"
+
+#: account/models.py:42
+msgid "Issue"
+msgstr "Выдан"
+
+#: account/models.py:43
+msgid "Date issue"
+msgstr "Дата выдачи"
+
+#: account/models.py:45 account/models.py:195 account/forms/account_form.py:28
+msgid "Phone"
+msgstr "Телефон"
+
+#: account/models.py:46 account/forms/account_form.py:29
+msgid "Mobile phone"
+msgstr "Мобильный телефон"
+
+#: account/models.py:47 account/models.py:196
+msgid "Fax"
+msgstr "Факс"
+
+#: account/models.py:48 account/models.py:162 account/forms/account_form.py:37
+#: account/forms/account_form.py:43
+msgid "INN"
+msgstr "ИНН"
+
+#: account/models.py:51
+msgid "Berth"
+msgstr "Должность"
+
+#: account/models.py:53 account/models.py:120 account/models.py:169
+#: account/models.py:198 account/models.py:235 catalog/models.py:34
+#: catalog/models.py:171 checkout/models.py:61 checkout/models.py:127
+#: delivery/CDEK/models.py:26 delivery/CDEK/models.py:61 shop/models.py:30
+msgid "Date added"
+msgstr "Дата создания"
+
+#: account/models.py:54 account/models.py:121 account/models.py:170
+#: account/models.py:199 account/models.py:236 catalog/models.py:35
+#: catalog/models.py:172 checkout/models.py:62 delivery/CDEK/models.py:27
+#: delivery/CDEK/models.py:62
+msgid "Date updated"
+msgstr "Дата обновления"
+
+#: account/models.py:58
+msgid "Contact"
+msgstr "Клиент"
+
+#: account/models.py:59
+msgid "Contacts"
+msgstr "Клиенты"
+
+#: account/models.py:84 account/models.py:158 account/models.py:192
+#: account/forms/account_form.py:41 catalog/models.py:22 catalog/models.py:154
+#: catalog/models.py:261
+msgid "Name"
+msgstr ""
+
+#: account/models.py:85 account/models.py:160
+msgid "Code"
+msgstr ""
+
+#: account/models.py:86 account/models.py:143
+msgid "Address format"
+msgstr "Формат адреса"
+
+#: account/models.py:92 account/models.py:110 account/forms/account_form.py:54
+#: account/forms/account_form.py:68
+msgid "Country"
+msgstr "Страна"
+
+#: account/models.py:93
+msgid "Countrys"
+msgstr "Страны"
+
+#: account/models.py:101 account/views/account_view.py:242
+msgid "Postal"
+msgstr "Почтовый"
+
+#: account/models.py:102 account/views/account_view.py:246
+msgid "Legal"
+msgstr "Юридический"
+
+#: account/models.py:103 account/views/account_view.py:241
+msgid "Actual"
+msgstr "Физический"
+
+#: account/models.py:106
+msgid "Other"
+msgstr "Прочее"
+
+#: account/models.py:108
+msgid "Type"
+msgstr ""
+
+#: account/models.py:109 account/models.py:172 account/models.py:197
+#: catalog/models.py:31 catalog/models.py:136 catalog/models.py:166
+#: catalog/models.py:291 catalog/models.py:309 catalog/models.py:327
+#: catalog/models.py:348 delivery/CDEK/models.py:20
+msgid "Active"
+msgstr "Активный"
+
+#: account/models.py:111 account/forms/account_form.py:55
+#: account/forms/account_form.py:69
+msgid "Region"
+msgstr "Область"
+
+#: account/models.py:112 account/forms/account_form.py:56
+#: account/forms/account_form.py:70
+msgid "City"
+msgstr "Город"
+
+#: account/models.py:113 account/forms/account_form.py:57
+#: account/forms/account_form.py:71
+msgid "Street"
+msgstr "Улица"
+
+#: account/models.py:114 account/forms/account_form.py:58
+msgid "ZIP"
+msgstr "Индекс"
+
+#: account/models.py:126 settings/config.py:19
+msgid "Address"
+msgstr "Адрес"
+
+#: account/models.py:127
+msgid "Addresses"
+msgstr "Адреса"
+
+#: account/models.py:132
+msgid "Not format country"
+msgstr ""
+
+#: account/models.py:142
+#, python-format
+msgid "Format country error: %s not found"
+msgstr ""
+
+#: account/models.py:159 account/forms/account_form.py:42
+#: catalog/models.py:155
+msgid "Full Name"
+msgstr "Полное название"
+
+#: account/models.py:163 account/forms/account_form.py:49
+msgid "KPP"
+msgstr ""
+
+#: account/models.py:164 account/forms/account_form.py:44
+msgid "OGRN"
+msgstr ""
+
+#: account/models.py:165 account/forms/account_form.py:45
+msgid "OKPO"
+msgstr ""
+
+#: account/models.py:167
+#, fuzzy
+msgid "Web Site"
+msgstr "Сайт"
+
+#: account/models.py:168 catalog/models.py:29 catalog/models.py:160
+#: catalog/models.py:262 delivery/CDEK/models.py:18 settings/config.py:18
+msgid "Description"
+msgstr "Описание"
+
+#: account/models.py:178
+msgid "Partner"
+msgstr "Контрагент"
+
+#: account/models.py:179
+msgid "Partners"
+msgstr "Контрагенты"
+
+#: account/models.py:193 account/forms/account_form.py:64
+msgid "BIC"
+msgstr ""
+
+#: account/models.py:194 account/forms/account_form.py:65
+msgid "Correspondent Account"
+msgstr "Корреспондентский счет"
+
+#: account/models.py:204 account/forms/account_form.py:63
+msgid "Bank"
+msgstr "Банк"
+
+#: account/models.py:205
+msgid "Banks"
+msgstr "Банки"
+
+#: account/forms/account_form.py:13
+#, fuzzy
+msgid "Username"
+msgstr "Пользователь"
+
+#: account/forms/account_form.py:15
+msgid "This value may contain only letters, numbers and @/./+/-/_ characters."
+msgstr ""
+
+#: account/forms/account_form.py:17 account/forms/account_form.py:26
+#: account/forms/registration_form.py:12
+msgid "E-mail"
+msgstr ""
+
+#: account/forms/account_form.py:18 account/forms/account_form.py:27
+msgid "Email is not correct!"
+msgstr ""
+
+#: account/forms/account_form.py:19
+msgid "first name"
+msgstr "имя"
+
+#: account/forms/account_form.py:20
+msgid "Specify the name!"
+msgstr ""
+
+#: account/forms/account_form.py:21
+#, fuzzy
+msgid "last name"
+msgstr "Отчество"
+
+#: account/forms/account_form.py:74
+msgid "Accout number"
+msgstr ""
+
+#: account/forms/registration_form.py:20
+msgid "A user with that email not found."
+msgstr ""
+
+#: account/forms/registration_form.py:22
+msgid "A user with that email already active."
+msgstr ""
+
+#: account/forms/registration_form.py:32
+msgid "A user with that email already exists."
+msgstr ""
+
+#: account/views/account_functions.py:12 account/views/account_view.py:141
+#: account/views/account_view.py:294 account/views/account_view.py:298
+#: account/views/account_view.py:343 account/views/account_view.py:442
+#: account/views/account_view.py:446 account/views/account_view.py:545
+msgid "Input data error access"
+msgstr ""
+
+#: account/views/account_functions.py:14 account/views/account_view.py:146
+#: account/views/account_view.py:305 account/views/account_view.py:378
+#: account/views/account_view.py:455 account/views/account_view.py:604
+msgid "Access denied"
+msgstr "Доступ запрещен"
+
+#: account/views/account_view.py:41 account/views/account_view.py:82
+#: account/views/account_view.py:168 account/views/account_view.py:182
+#: account/views/account_view.py:317 account/views/account_view.py:359
+#: account/views/account_view.py:515 account/views/account_view.py:578
+msgid "Data saved"
+msgstr "Данные сохранены"
+
+#: account/views/account_view.py:362 account/views/account_view.py:581
+msgid "Input data error"
+msgstr ""
+
+#: account/views/account_view.py:376 account/views/account_view.py:602
+#, fuzzy
+msgid "Address removed"
+msgstr "Формат адреса"
+
+#: account/views/auth_view.py:31
+msgid "Welcome!"
+msgstr "Добро пожаловать!"
+
+#: account/views/auth_view.py:35
+msgid "Login failed!"
+msgstr "Логин или пароль не верны!"
+
+#: account/views/registration_view.py:56
+msgid "Message sent"
+msgstr "Сообщение отправлено"
+
+#: catalog/admin.py:24
+msgid "Invalid Entry"
+msgstr ""
+
+#: catalog/admin.py:30
+msgid "Mark selected categories as active"
+msgstr ""
+
+#: catalog/admin.py:35
+msgid "Mark selected categories as not active"
+msgstr ""
+
+#: catalog/admin.py:46 catalog/admin.py:121
+msgid "SEO"
+msgstr ""
+
+#: catalog/admin.py:114
+msgid "Relations"
+msgstr ""
+
+#: catalog/admin.py:117
+msgid "Item Dimensions"
+msgstr "Размеры"
+
+#: catalog/models.py:28 catalog/models.py:159 catalog/models.py:342
+msgid "Short Description"
+msgstr "Краткое описание"
+
+#: catalog/models.py:32 catalog/models.py:135 catalog/models.py:164
+#: catalog/models.py:265 catalog/models.py:290 catalog/models.py:308
+#: catalog/models.py:326 catalog/models.py:347 delivery/CDEK/models.py:21
+msgid "Ordering"
+msgstr "Сортировка"
+
+#: catalog/models.py:44 catalog/models.py:132 catalog/models.py:157
+#: shop/models.py:28
+msgid "Category"
+msgstr "Категория"
+
+#: catalog/models.py:45
+msgid "Categories"
+msgstr "Категории"
+
+#: catalog/models.py:133
+msgid "Image"
+msgstr "Изображение"
+
+#: catalog/models.py:134 catalog/models.py:289 catalog/models.py:307
+#: catalog/models.py:325
+msgid "Caption"
+msgstr "Заголовок"
+
+#: catalog/models.py:141
+#, fuzzy
+msgid "Category Image"
+msgstr "Категория"
+
+#: catalog/models.py:142
+#, fuzzy
+msgid "Category Images"
+msgstr "Категории"
+
+#: catalog/models.py:167
+msgid "Featured"
+msgstr "Рекомендуемый"
+
+#: catalog/models.py:168 checkout/models.py:14
+msgid "New"
+msgstr "Новый"
+
+#: catalog/models.py:169
+msgid "Published"
+msgstr "Опубликован"
+
+#: catalog/models.py:174
+msgid "Guarantee"
+msgstr "Гарантия"
+
+#: catalog/models.py:176
+msgid "Weight"
+msgstr "Вес"
+
+#: catalog/models.py:177
+msgid "Weight units"
+msgstr "Единицы веса"
+
+#: catalog/models.py:178
+msgid "Length"
+msgstr "Длина"
+
+#: catalog/models.py:179
+msgid "Length units"
+msgstr "Единицы длины"
+
+#: catalog/models.py:180
+msgid "Width"
+msgstr "Ширина"
+
+#: catalog/models.py:181
+msgid "Width units"
+msgstr "Единицы ширины"
+
+#: catalog/models.py:182
+msgid "Height"
+msgstr "Высота"
+
+#: catalog/models.py:183
+msgid "Height units"
+msgstr "Единицы высоты"
+
+#: catalog/models.py:185 checkout/admin.py:25 delivery/CDEK/admin.py:17
+msgid "Price"
+msgstr "Цена"
+
+#: catalog/models.py:188
+msgid "Number in stock"
+msgstr "Количество на складе"
+
+#: catalog/models.py:190
+msgid "Also Buy"
+msgstr "Так же покупают"
+
+#: catalog/models.py:191
+msgid "Analog"
+msgstr "Аналогичные"
+
+#: catalog/models.py:192
+msgid "Modification"
+msgstr "Модификации"
+
+#: catalog/models.py:193
+msgid "Adding"
+msgstr "Дополнительное"
+
+#: catalog/models.py:202 catalog/models.py:278 catalog/models.py:287
+#: catalog/models.py:305 catalog/models.py:323 catalog/models.py:345
+#: shop/models.py:27
+msgid "Product"
+msgstr "Продукт"
+
+#: catalog/models.py:203
+msgid "Products"
+msgstr "Продукты"
+
+#: catalog/models.py:255
+msgid "One or more characters"
+msgstr "Один или несколько символов"
+
+#: catalog/models.py:256
+msgid "Integer number"
+msgstr "Целое число"
+
+#: catalog/models.py:257
+msgid "Yes or No"
+msgstr "Да или Нет"
+
+#: catalog/models.py:258
+msgid "Decimal number"
+msgstr "Десятичное число"
+
+#: catalog/models.py:263
+msgid "Field Validations"
+msgstr "Проверка поля"
+
+#: catalog/models.py:264
+msgid "Attribute units"
+msgstr "Единица измерения"
+
+#: catalog/models.py:268
+msgid "Product attribute"
+msgstr "Опция продукта"
+
+#: catalog/models.py:269
+msgid "Product attributes"
+msgstr "Опции продуктов"
+
+#: catalog/models.py:341 delivery/CDEK/models.py:17 settings/config.py:8
+#: settings/config.py:17 shop/models.py:21
+msgid "Title"
+msgstr ""
+
+#: catalog/models.py:343
+msgid "Full Description"
+msgstr "Полное описание"
+
+#: catalog/models.py:344
+msgid "Logo"
+msgstr "Логотип"
+
+#: catalog/models.py:354
+msgid "Brand"
+msgstr "Производитель"
+
+#: catalog/models.py:355
+msgid "Brands"
+msgstr "Производители"
+
+#: catalog/templatetags/catalog_tags.py:74
+#: catalog/templatetags/catalog_tags.py:79
+msgid "No"
+msgstr "Нет"
+
+#: catalog/templatetags/catalog_tags.py:77
+msgid "Yes"
+msgstr "Да"
+
+#: checkout/admin.py:23 delivery/CDEK/admin.py:15
+msgid "From"
+msgstr ""
+
+#: checkout/admin.py:24 delivery/CDEK/admin.py:16
+msgid "To"
+msgstr ""
+
+#: checkout/models.py:15
+msgid "Opened"
+msgstr "Открыт"
+
+#: checkout/models.py:16
+msgid "Paid"
+msgstr "Оплачен"
+
+#: checkout/models.py:17
+msgid "Sent"
+msgstr "Отправлен"
+
+#: checkout/models.py:21
+msgid "Closed"
+msgstr "Закрыт"
+
+#: checkout/models.py:22
+msgid "Canceled"
+msgstr "Отменен"
+
+#: checkout/models.py:63
+#, fuzzy
+msgid "Date closed"
+msgstr "Дата выдачи"
+
+#: checkout/models.py:108
+msgid "Current price"
+msgstr "Текущая цена"
+
+#: checkout/models.py:110
+msgid "Discount"
+msgstr "Скидка"
+
+#: checkout/models.py:132
+msgid "TrackOrder"
+msgstr ""
+
+#: checkout/models.py:133
+msgid "TrackOrders"
+msgstr ""
+
+#: checkout/views/cart_views.py:27 checkout/views/cart_views.py:29
+#: checkout/views/cart_views.py:67
+msgid "Data entry errors"
+msgstr ""
+
+#: checkout/views/cart_views.py:36
+msgid "Exchange rate error"
+msgstr ""
+
+#: checkout/views/cart_views.py:44 checkout/views/cart_views.py:72
+msgid "Product not found"
+msgstr "Продукт не найден"
+
+#: checkout/views/cart_views.py:50
+#, python-format
+msgid "%(name)s x%(count)s added to cart"
+msgstr "%(name)s x%(count)s добавлено в корзину"
+
+#: checkout/views/cart_views.py:52
+#, python-format
+msgid "%s added to cart"
+msgstr "%s добавлен в корзину"
+
+#: checkout/views/cart_views.py:77
+#, python-format
+msgid "Number of %(name)s updated by %(count)s"
+msgstr ""
+
+#: checkout/views/cart_views.py:90
+#, python-format
+msgid "%s product is deleted from cart"
+msgstr ""
+
+#: checkout/views/order_views.py:44
+msgid "Order create"
+msgstr "Заказ создан"
+
+#: delivery/CDEK/models.py:23
+msgid "Margin"
+msgstr "Наценка"
+
+#: delivery/CDEK/models.py:32
+msgid "Tariff"
+msgstr "Тариф"
+
+#: delivery/CDEK/models.py:33
+msgid "Tariffs"
+msgstr "Тарифы"
+
+#: delivery/CDEK/models.py:50
+msgid "Shipper"
+msgstr "Грузоотправитель"
+
+#: delivery/CDEK/models.py:51
+msgid "Shipper id"
+msgstr ""
+
+#: delivery/CDEK/models.py:52
+#, fuzzy
+msgid "Destination"
+msgstr "Описание"
+
+#: delivery/CDEK/models.py:53
+#, fuzzy
+msgid "Destination id"
+msgstr "Описание"
+
+#: delivery/CDEK/models.py:55
+msgid "Price Delivery"
+msgstr "Цена доставки"
+
+#: delivery/CDEK/models.py:64
+#, fuzzy
+msgid "Bill Number"
+msgstr "Номер"
+
+#: delivery/CDEK/models.py:76
+msgid "Deliverys"
+msgstr "Доставки"
+
+#: settings/common_settings.py:11
+msgid "Russian"
+msgstr "Русский"
+
+#: settings/config.py:6
+msgid "Site Settings"
+msgstr "Настройки сайта"
+
+#: settings/config.py:9
+msgid "Meta Description"
+msgstr ""
+
+#: settings/config.py:10
+msgid "Meta Keywords"
+msgstr ""
+
+#: settings/config.py:11
+msgid "Footer"
+msgstr ""
+
+#: settings/config.py:15
+#, fuzzy
+msgid "Store Settings"
+msgstr "Настройки сайта"
+
+#: settings/menu.py:11
+msgid "Dashboard"
+msgstr ""
+
+#: settings/menu.py:12
+msgid "Settings"
+msgstr "Настройки"
+
+#: settings/menu.py:13
+msgid "File Browser"
+msgstr "Файловый менеджер"
+
+#: settings/menu.py:23
+msgid "Site"
+msgstr "Сайт"
+
+#: shop/admin.py:27 shop/models.py:36
+msgid "Sale"
+msgstr "Распродажа"
+
+#: shop/admin.py:28
+msgid "Targets"
+msgstr "Цели"
+
+#: shop/models.py:22
+msgid "Percentage"
+msgstr "Проценты"
+
+#: shop/models.py:24
+msgid "Value"
+msgstr "Значение"
+
+#: shop/models.py:31
+msgid "Date expiry"
+msgstr ""
+
+#: shop/models.py:37
+msgid "Sales"
+msgstr "Распродажи"
+
+#: templates/base.html:136
+msgid "Admin"
+msgstr ""
+
+#: templates/base.html:142 templates/livesettings/site_settings.html:48
+msgid "Log out"
+msgstr "Выход"
+
+#: templates/base.html:144
+msgid "Log in"
+msgstr "Вход"
+
+#: templates/inplaceeditform/inplace_js.html:14
+msgid "Successfully saved"
+msgstr ""
+
+#: templates/inplaceeditform/inplace_js.html:18
+msgid "You have unsaved changes!"
+msgstr ""
+
+#: templates/livesettings/site_settings.html:48
+msgid "Documentation"
+msgstr "Документация"
+
+#: templates/livesettings/site_settings.html:48
+msgid "Change password"
+msgstr "Изменить пароль"
+
+#: templates/livesettings/site_settings.html:51
+msgid "Home"
+msgstr ""
+
+#: templates/livesettings/site_settings.html:52
+msgid "Edit Site Settings"
+msgstr ""
+
+#: templates/livesettings/site_settings.html:59
+msgid "Livesettings are disabled for this site."
+msgstr ""
+
+#: templates/livesettings/site_settings.html:60
+msgid "All configuration options must be edited in the site settings.py file"
+msgstr ""
+
+#: templates/livesettings/site_settings.html:66
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/livesettings/site_settings.html:82
+#, python-format
+msgid "Group settings: %(name)s"
+msgstr ""
+
+#: templates/livesettings/site_settings.html:108
+msgid "Update Settings"
+msgstr "Обновить настройки"
+
+#: templates/livesettings/site_settings.html:109
+msgid "Uncollapse all"
+msgstr "Развернуть все"
+
+#: templates/livesettings/site_settings.html:110
+msgid "Export"
+msgstr ""
+
+#: templates/livesettings/site_settings.html:113
+msgid "You don't have permission to edit values."
+msgstr ""
+
+#~ msgid "Buying"
+#~ msgstr "Заказы"
+
+#~ msgid "Orders"
+#~ msgstr "Сортировка"
+
+#~ msgid "Field %s not found"
+#~ msgstr "Продукт не найден"
